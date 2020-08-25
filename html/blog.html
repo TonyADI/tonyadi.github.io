@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog Page</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap-4.3.1.css" rel="stylesheet">
+  <link href="../css/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand ml-5" href="../index.html"><i>ETA</i></a>
+		<div class="skip"><a href="#maincontent">Skip to main content</a></div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse offset-md-8" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Me</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="courses.html">Courses</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+			 <li class="nav-item active">
+            <a class="nav-link" href="#">Blog <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+    <section id="maincontent">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<hr>
+					<h1 class="text-center">Blog Posts</h1>
+					<hr>
+					<div class="container">
+					  <div class="row">
+						<div class="col-md-4 pb-1 pb-md-0">
+						  <div class="card">
+							<img class="card-img-top img-rectangle" src="../images/virtualreality.jpg" alt="Card image cap">
+							<div class="card-body">
+							  <h5 class="card-title">Virtual Reality: Good or Evil?</h5>
+								<span>Written on October 10, 2019</span>
+							  <p class="card-text">Virtual reality is an emerging technology on account of its ability to change the state of affairs within a society. It is usually composed of a headset and occasionally gloves which allow the user to completely immerse themselves into a virtual 3D environment free of physical, real life entities...
+							  <a href="#" data-toggle="modal" data-target="#VR">Finish Reading</a></p>
+								<!-- The Modal -->
+								<div class="modal fade" id="VR">
+								  <div class="modal-dialog modal-lg">
+									<div class="modal-content">
+									  <!-- Modal Header -->
+									  <div class="modal-header">
+										<h4 class="modal-title">Virtual Reality: Good or Evil?</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									  </div>
+									  <!-- Modal body -->
+									  <div class="modal-body">
+										  <p>
+										&emsp;&emsp;Virtual reality is an emerging technology on account of its ability to change the state of affairs within a society. It is usually composed of a headset and occasionally gloves which allow the user to completely immerse themselves into a virtual 3D environment free of physical, real life entities. The technology as we know it goes as far back as the 20th century with the ‘Experience theater’ and the ‘Sensorama’ but the concept itself was conceived in the 19th century with Antonin Artaud and her views on illusion and reality and how she applied it to her plays. The first software attributed to virtual reality can be regarded as the ‘Virtual reality modeling language’ which was conceived in 1994. 
+										  </p><p>&emsp;&emsp;
+										In conclusion, virtual reality is an emerging technology with the ability to allow people present themselves in a way which differs from how they are physically presented. Due to this, the state of affairs and the status quo of the society will be affected which in turn will have an effect on how individuals interact and communicate with one another. These changes come with increased privacy concerns and how its influence on ideology and thinking of a society could result in a lack of autonomy.</p>
+									  </div>
+									  <!-- Modal footer -->
+									  <div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+									  </div>
+
+									</div>
+								  </div>
+								</div>
+							</div>
+						  </div>
+						</div>
+						<div class="col-md-4 pb-1 pb-md-0">
+						  <div class="card">
+							<img class="card-img-top img-rectangle" src="../images/hypothermia.jpg" alt="man in freezing conditions">
+							<div class="card-body">
+							  <h5 class="card-title">Hypothermia in Gaming</h5>
+								<span>Written on October 15, 2019</span>
+							  <p class="card-text">The human body can be so strong yet so fragile. Its responds to different situations is a spectacle of evolution. Sometimes these responses are implemented properly in gaming contexts and sometimes they are not. So, how can we properly implement it into a game system...
+							  <a href="#" data-toggle="modal" data-target="#hypo"> Finish Reading</a></p>
+								<!-- The Modal -->
+								<div class="modal fade" id="hypo">
+								  <div class="modal-dialog modal-lg">
+									<div class="modal-content">
+									  <!-- Modal Header -->
+									  <div class="modal-header">
+										<h4 class="modal-title">Hypothermia in Gaming</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									  </div>
+									  <!-- Modal body -->
+									  <div class="modal-body">
+										<p>&emsp;&emsp;The human body can be so strong yet so fragile. The way it responds to different situations and environments is a spectacle of evolution. Sometimes these responses are implemented properly in gaming contexts and sometimes they are not. Most games do not bother to simulate the body responses of a playable character in a cold environment properly, not to mention what occurs when the player stays in that environment longer than they should. When the human body remains in a cold region for too long its core temperature is reduced and a phenomenon called ‘Hypothermia’ starts to set in. What is hypothermia and how can it be properly implemented into a game system. </p><p>&emsp;&emsp;Instead of the conventional method of just having the playable character making audible noises to signify they are cold and maybe shivering with ice on the screen as a visual cue, we implement the 3 stages of hypothermia with gradually increasing effects as the players core temperature keeps dropping. This allows for more realism therefore which leads to an increased level of immersion for the player. Every stage of hypothermia is a state in the game and the requirement to get to each state is the value of the core temperature of the character at that time. Each state is player activated because the player is in control of the core temperature, which can be altered by changing locations in the game. The default conditions of each state are the symptoms of each stage of hypothermia. The player can move from one state to another by reducing or increasing their core temperature.</p>
+									  </div>
+									  <!-- Modal footer -->
+									  <div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+									  </div>
+
+									</div>
+								  </div>
+								</div>
+							</div>
+						  </div>
+						</div>
+						<div class="col-md-4 pb-1 pb-md-0">
+						  <div class="card">
+							<img class="card-img-top img-rectangle" src="../images/music.jpg" alt="musical notes">
+							<div class="card-body">
+							  <h5 class="card-title">Popular Music and the Economic Divide </h5>
+								<span>Written on November 2, 2019</span>
+							  <p class="card-text">The theory that popular culture exists to mask the existence of economic disparity is associated with the relationship between the superstructure and the base. Karl Marx , a theorist of Power, explains how the base is the powerhouse of society ...
+							  <a href="#" data-toggle="modal" data-target="#music"> Finish Reading</a></p>
+								<!-- The Modal -->
+								<div class="modal fade" id="music">
+								  <div class="modal-dialog modal-lg">
+									<div class="modal-content">
+									  <!-- Modal Header -->
+									  <div class="modal-header">
+										<h4 class="modal-title">Popular Music and the Economic Divide</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									  </div>
+									  <!-- Modal body -->
+									  <div class="modal-body">
+										<p>&emsp;&emsp;The theory that popular culture exists to mask the existence of economic disparity is associated with the relationship between the superstructure and the base. Karl Marx, a theorist of Power, explains how the base is the powerhouse of society which encapsulates the means and relations of production while shaping and controlling the superstructure. The superstructure are the elements such as religion, family, and politics which exist outside the production of goods. Music is a part of popular culture and can essentially be used to control and manipulate society. By examining the top songs on Apple music and Spotify it will be apparent that music that is considered trendy and hot is decided by those who control the means of production.</p><p>&emsp;&emsp;In conclusion, the re-occurring themes and similarities in lyrics and contexts of the top 100 songs in Canada on Apple music and Spotify further prove the assertations of Marx that who is in control of the means of production is also in control of mass media and popular music and of the Frankfurt school that homogeneity and predictability play a role in manipulating the masses by fetishizing commodities and creating unnecessary human wants. Due to the cravings of familiarity that humans possess, top conglomerates exploit this by putting out the same songs, products, movies and so on in an effort to keep consumers chasing unnecessary wants and unaware of the economic divide that exists between both classes.</p>
+									  </div>
+									  <!-- Modal footer -->
+									  <div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+									  </div>
+
+									</div>
+								  </div>
+								</div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					  <div class="row mt-4">
+						<div class="col-md-4 pb-1 pb-md-0">
+						  <div class="card">
+							<img class="card-img-top img-rectangle" src="../images/africa.jpg" alt="african soldier">
+							<div class="card-body">
+							  <h5 class="card-title">Media’s Representation of Africa </h5>
+								<span>Written on November 2, 2019</span>
+							  <p class="card-text">In popular western media today, it is quite normal to find Africa being synonymous with negative narratives. The average westerner thinks of Africa as a country rather than a region and pictures vast wastelands filled with wild animals, no modern societies and a lack of clean water...<a href="#" data-toggle="modal" data-target="#africa"> Finish Reading</a></p>
+								<!-- The Modal -->
+								<div class="modal fade" id="africa">
+								  <div class="modal-dialog modal-lg">
+									<div class="modal-content">
+									  <!-- Modal Header -->
+									  <div class="modal-header">
+										<h4 class="modal-title">Media’s Representation of Africa</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									  </div>
+									  <!-- Modal body -->
+									  <div class="modal-body">
+										<p>&emsp;&emsp;The representation of Africa in western popular media and how these representations work to reinforce and support the pre-established power dynamic between the two groups is a topic which has interested me for quite some time. I analysed the signs, codes and connotations embedded in the content from one of the popular western media news organizations using semiotic analysis and categorized them into themes. By connecting these themes and viewing them from the context of the topic at hand we could see how these themes contributed to a broader message which is that popular western media reinforces stereotypes in order to maintain the pre-established power relations between both groups. It was evident that Africa is ‘othered’ by being the negative side of difference when compared to the west. The importance of this research is evident because the stereotypical representations negatively impact the regions ability to progress therefore reaffirming these stereotypes and bringing them to fruition.</p><p>&emsp;&emsp;
+										  By performing a semiotic analysis of African news articles posted on the Wall Street Journal, I was able to find that the white saviour complex is rooted in American Journalism to maintain the power dynamics established during colonial rule. Representation of Africa in the media, while true, is skewed to present the region in a negative one-sided manner. These representations reinforce stereotypes such as most of the inhabitants living in abject poverty, suffering from a poor diet and nutrition which is why phrases such as ‘there are people starving in Africa’ are uttered whenever people in the west are being wasteful of food resources. Phrases such as prior mentioned one might look humane on the surface but associate the region with suffering and turmoil. Lack of communication with the writers of these news articles limited my ability to fully understand the system and framework within which these signs and codes exist. A much deeper semiotic analysis could have been achieved by identifying the syntagmatic structure of the texts, performing a thorough paradigmatic analysis, determining the intertextuality, rhetorical tropes and social semiotics of the text. Further research is still needed to fully understand the impact these representations have and these could be achieved by further analyzing other popular media forms such as movies, music and tv shows which are consumed more than news articles and disseminate these discourses and representation at a broader and faster rate. Also, we could analyze these mediums in other regions which are also considered the Other to see if these prejudices and stereotypes are also upheld or if there is unity within the collective Other of the west.</p>
+
+
+									  </div>
+									  <!-- Modal footer -->
+									  <div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+									  </div>
+
+									</div>
+								  </div>
+								</div>
+							</div>
+						  </div>
+						</div>
+						<div class="col-md-4 pb-1 pb-md-0">
+						  <div class="card">
+							<img class="card-img-top img-rectangle" src="../images/gaming.jpg" alt="man playing a game">
+							<div class="card-body">
+							  <h5 class="card-title">SBMM as a Design Problem</h5>
+								<span>Written on November 21, 2019</span>
+							  <p class="card-text">Skill-based matchmaking (SBMM) is a design choice which pits players of an equal skill set against each other. When utilized properly it makes for interesting competitive gameplay which many strive for. The MDA framework allows us to identify issues associated with SBMM...
+							  <a href="#" data-toggle="modal" data-target="#sbmm"> Finish Reading</a></p>
+								<!-- The Modal -->
+								<div class="modal fade" id="sbmm">
+								  <div class="modal-dialog modal-lg">
+									<div class="modal-content">
+									  <!-- Modal Header -->
+									  <div class="modal-header">
+										<h4 class="modal-title">SBMM as a Design Problem</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									  </div>
+									  <!-- Modal body -->
+									  <div class="modal-body">
+										<p>&emsp;&emsp;Skill-based matchmaking (SBMM) is a design choice which pits players of an equal skill set against each other. When utilized properly it makes for interesting competitive gameplay which many strive for. According to Graepel and Herbrich (2006), “The key idea behind skill-based ranking and matchmaking is that a game is fun for the participating players if the outcome is uncertain in the sense that each of the participating teams of players has a fair chance of winning” (p.1). The MDA framework allows us to identify underlying issues which could be associated with SBMM. The mechanics of a game help define its rules, controls and the system that manipulates what the player can and cannot do. The rules of SBMM are that players are pit against people with a skill range very close to theirs. The system does not pit veterans against beginners. The first issue with this system is how can it genuinely tell the skill level of a new player? Graepel and Herbrich (2006) found that “rating players is viewed as an estimation problem with the ultimate goal of estimating players’ skills so as to be able to predict the probability of game outcomes between players purely based on their skill ratings.” (p.2) So, the system does not begin to work until a certain number of placement matches have been played. The dynamics of a game are the resulting behaviours of players when exposed to the mechanics of a game. Because everyone is on the same skill level and therefore a worthy opponent, players tend to play more tactically by planning their course of action ahead and this becomes the dominant strategy in most games. This is not a problem in games in which the implicit premises are for the players to work strategically such as League of Legends and Overwatch and this is emphasized by Graepel and Herbrich (2006), “it is crucial that the purpose of the game and the behavior of the rating system be aligned: people striving for high ratings should be forced to play in accordance with the spirit of the game” (p.3). The aesthetic of a game is centered on how the mechanics and dynamics emotionally impact the player. Players are always on edge, alert, and aware of their surroundings in the gaming environment when playing competitively. But not implementing SBMM properly can result in poor gameplay and dynamics.</p>
+									  </div>
+									  <!-- Modal footer -->
+									  <div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+									  </div>
+
+									</div>
+								  </div>
+								</div>
+							</div>
+						  </div>
+						</div>
+						<div class="col-md-4 pb-1 pb-md-0">
+						  <div class="card">
+							<img class="card-img-top img-rectangle" src="../images/bond.jpg" alt="Bond, James Bond.">
+							<div class="card-body">
+							  <h5 class="card-title">Adapting James Bond into Killing Spree</h5>
+								<span>Written on November 29, 2019</span>
+							  <p class="card-text">The intellectual property that would be featured in the game is James Bond. The IP could be implemented into the game by adding a character modelled after the James Bond actor and having the character named ‘007’ for instant recognition...
+							  <a href="#" data-toggle="modal" data-target="#killingspree"> Finish Reading</a></p>
+								<!-- The Modal -->
+								<div class="modal fade" id="killingspree">
+								  <div class="modal-dialog modal-lg">
+									<div class="modal-content">
+									  <!-- Modal Header -->
+									  <div class="modal-header">
+										<h4 class="modal-title">Adapting James Bond into Killing Spree</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									  </div>
+									  <!-- Modal body -->
+									  <div class="modal-body">
+										<p>&emsp;&emsp;The intellectual property that would be featured in the game is James Bond. The IP could be implemented into the game by adding a character modelled after the latest James Bond actor and having the character named ‘007’ for instant recognition and familiarity. Vehicles unique to the James Bond franchise such as the ‘Wet Nellie’ that was used in the movie ‘The Spy Who Loved Me’ with the modifications also implemented into the gameplay would be added. Gadgets and weapons that are also unique to the IP such as the Cigarette Dart used in ‘You Only Live Twice’ as well as the Mobile phone from ‘Tomorrow Never Dies’ that was equipped with a stun gun and lock opener which could be used in the break-in mission would also be implemented. A mechanic that whenever he makes a kill the playable character uses phrases unique to the franchise such as “I thought Christmas only comes once a year” would be added. Furthermore, the menu screen would play the James Bond theme music to set the tone and give the game a sense of familiarity to the franchise. Lastly, the setting of the game would be in Britain with most of the characters having a British accent. By implementing all of these changes the game benefits by garnering recognition and credibility and much more.</p>
+									  </div>
+									  <!-- Modal footer -->
+									  <div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+									  </div>
+
+									</div>
+								  </div>
+								</div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </section>
+    <hr>
+    <h1 class="text-center">Editorials</h1>
+    <hr>
+    <section>
+	  <div class="container">
+		<div class="row">
+			<div class="col-12">
+		  		<div class="media border p-3">
+					  <img src="../images/surveillance.jpg" alt="a security camera" class="mr-3 img-square">
+					  <div class="media-body">
+						  <span class="badge badge-pill badge-primary">Technology</span>
+						<h5>Who is Watching the Watchers? <small><i>Written on October 28, 2019</i></small></h5>
+						<p>Facial recognition technology is slowly being adopted into the line of police work making police life much easier but the life of the average citizen much harder. The general public is rightfully worried that the technology is not reliable enough to be used in such an important line of work. Even with these public outcries there is a continued use of facial recognition technology in the police force some of which is improper. So, the question becomes, who watches the watchers?
+							The privacy issue concerns can be addressed by using the technology only on people with active warrants or warning civilians beforehand that they are entering an area surveyed by facial technology. Also, only turning on the technology on body cameras when a given prerequisite enacted by the government is met. Preventing databases and datasets from being viewed and sold to third party companies and hackers is also a necessity in protecting privacy rights.
+						  Although facial recognition is evolutionary and helpful the underlying issues which are rooted in the technology’s algorithm make police use of the technology controversial. Removing the bias and privacy concerns from the technology would make police use of the technology great again. 
+
+						</p>
+					  </div>
+					</div>
+					  <div class="media border p-3 mt-4">
+						<div class="media-body">
+							<span class="badge badge-pill badge-warning">Social Issues</span>
+						  <h5>Patriarchy strikes again! <small><i>Written on December 2, 2019</i></small></h5>
+						  <p>Representation is very important as it controls views on who is the ‘other’ in society. Language has a strong capacity to dictate meaning and therefore is essential when representations of identity are involved. J.L Austin emphasizes that performative language is how notions on gender are derived. Gender itself is defined through ‘stereotypes’ which work to maintain the order in society.
+							  Representation of sex and gender in the media currently reinforces stereotypes, making gender performative.
+							the process of trying to represent a group of people without using stereotypical traits is difficult seeing as it is those same tropes that we use to identify these groups of people in society. Language is used to define gender, and these stereotypes are what are used to differentiate one gender from the other. In order to target a group of people and in essence interpellate them one needs to take advantage of these pre-established ‘characteristics’ and notions that they are associated with in order to reach out to them. The way we could battle these clichés and stereotypical representations was to combat the dominant discourses associated with these groups of people and use terms which are not usually associated with them to represent them.
+							</p>      
+						</div>
+						<img src="../images/patriarchy.jpg" alt="Postmodern Feminism" class="ml-3 img-square">
+					  </div>
+		  	</div>
+		  </div>
+		</div>
+	  </section>
+    <hr>
+    
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © ETA. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap-4.3.1.js"></script>
+  </body>
+</html>
