@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>diet &#8211; tonisfood</title>
+	<atom:link href="https://ccit670.firebird.sheridanc.on.ca/wordpress/?feed=rss2&#038;tag=diet" rel="self" type="application/rss+xml" />
+	<link>https://ccit670.firebird.sheridanc.on.ca/wordpress</link>
+	<description>Healthy alternatives for the masses</description>
+	<lastBuildDate>Fri, 21 Feb 2020 14:40:22 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+
+<image>
+	<url>https://ccit670.firebird.sheridanc.on.ca/wordpress/wp-content/uploads/cropped-photo-1560607162-26b0344e6943-32x32.jpeg</url>
+	<title>diet &#8211; tonisfood</title>
+	<link>https://ccit670.firebird.sheridanc.on.ca/wordpress</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Time to mix it up!</title>
+		<link>https://ccit670.firebird.sheridanc.on.ca/wordpress/?p=191</link>
+				<comments>https://ccit670.firebird.sheridanc.on.ca/wordpress/?p=191#respond</comments>
+				<pubDate>Wed, 19 Feb 2020 22:36:24 +0000</pubDate>
+		<dc:creator><![CDATA[ccit670]]></dc:creator>
+				<category><![CDATA[Recipes]]></category>
+		<category><![CDATA[diet]]></category>
+		<category><![CDATA[food]]></category>
+		<category><![CDATA[meat]]></category>
+		<category><![CDATA[salad]]></category>
+		<category><![CDATA[vegetables]]></category>
+
+		<guid isPermaLink="false">https://ccit670.firebird.sheridanc.on.ca/wordpress/?p=191</guid>
+				<description><![CDATA[The ingredients you'll need for this dish contain a mixture of meat, lettuce, beans, corn, basil and so much more! What are you waiting for? Hop in!]]></description>
+								<content:encoded><![CDATA[
+<p>Today&#8217;s recipe is a mix of vegetables and meat! (Scary I know). The ingredients you&#8217;ll need for this dish are:</p>
+
+
+
+<div class="wp-block-group"><div class="wp-block-group__inner-container">
+<ul><li>1 head romaine lettuce, chopped</li><li>1 (15 ounce) can black beans, rinsed and drained</li><li>1 (15 ounce) can sweet corn, drained</li><li>1 red bell pepper, chopped</li><li>1 cup peeled, shredded jicama</li><li>1 cup shredded carrots</li><li>4 scallions, thinly sliced</li><li>¼ cup chopped fresh basil</li><li>¼ cup chopped fresh cilantro</li><li>3 limes, divided</li><li>1 (6 ounce) package cooked chicken breast strips (such as Our veri own chicken)</li><li>2 tablespoons barbeque sauce</li><li>1 avocado &#8211; peeled, pitted, and cubed</li></ul>
+</div></div>
+
+
+
+<p>Follow these steps to alleviate the grumble in your tummy:</p>
+
+
+
+<ul><li>First, mix the lettuce, black beans, corn, red bell pepper, jicama, carrots, scallions, basil, and cilantro together in a large bowl then juice 2 limes and drizzle juice over salad; toss lightly.</li><li>Second, you want to combine the chicken and barbeque sauce in a microwave-safe bowl; heat in microwave until chicken is warmed through, about 45 seconds.</li><li>Third, arrange the chicken and avocado on top of the salad and squeeze remaining lime over salad.</li></ul>
+
+
+
+<p>Source:  <a href="https://www.allrecipes.com/recipe/238683/bbq-chicken-chopped-salad/?src=VD_Summary">https://www.allrecipes.com/recipe/238683/bbq-chicken-chopped-salad/?src=VD_Summary</a> </p>
+
+
+
+<iframe src="//players.brightcove.net/1033249144001/HyUr5pA17_default/index.html?videoId=5464525437001" allowfullscreen="" frameborder="0"></iframe>
+
+
+
+<p>Source:  <a href="https://www.allrecipes.com/video/7504/bbq-chicken-chopped-salad/">https://www.allrecipes.com/video/7504/bbq-chicken-chopped-salad/</a> </p>
+]]></content:encoded>
+							<wfw:commentRss>https://ccit670.firebird.sheridanc.on.ca/wordpress/?feed=rss2&#038;p=191</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

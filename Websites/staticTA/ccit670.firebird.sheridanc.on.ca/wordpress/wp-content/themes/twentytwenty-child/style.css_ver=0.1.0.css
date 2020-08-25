@@ -1,0 +1,391 @@
+/*
+Theme Name: Twenty Twenty Child Theme
+Theme URI: http://ccit670.firebird.sheridanc.on.ca/
+Description: CCIT460 Project 1
+Author: Tony Adiari
+Template: twentytwenty
+Version: 0.1.0
+*/
+
+@import url("../twentytwenty/style.css");
+
+.site-title {
+	text-transform: uppercase;
+}
+
+h1.entry-title {
+	font-size: 6rem;
+	font-weight: 600 !important;
+}
+
+.singular .entry-header {
+	padding: 1rem 0;
+}
+
+.post-inner .entry-content p,
+.post-inner .entry-content li{
+	font-size: 80%;
+}
+
+
+.post-inner .entry-content h2{
+	font-size: 95%;
+}
+
+.wp-block-columns {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.logo-icon{
+	width: 80px;
+	margin-right: 20px;
+}
+
+.megatron {
+	position: relative;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+.megatron video {
+	height: auto;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.megatron .video-caption {
+    position: absolute;
+    bottom:4em;
+    left:0;
+    z-index:1;
+    background: rgba(50,50,50,0.25);
+    color: #fff;
+    width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.megatron .video-caption h1 {
+	color: #fff;
+	font-family: 'Nobile', sans-serif;
+	font-size: 12em;
+	text-align: center;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #487EF7 !important;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #7194E4;
+}
+
+/* Add a background color and some padding around the form */
+.custom_container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.cus_container{
+	float:right;
+	margin-right: 0px;
+}
+
+body {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif" !important;
+}
+
+
+h2, h3, h4, h5, h6{
+	font-weight: 600 !important;
+}
+
+hr.styled-seperator{
+	background: #000 !important;
+}
+
+.entry-content hr,
+hr.styled-separator {
+	background: linear-gradient(to left, #000, #021f01);
+	background-color: transparent !important;
+	border: none;
+	height: 0.1rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.entry-content > .alignfull {
+		margin-bottom: 4rem;
+		margin-top: 0rem;
+	}
+
+
+
+article.post-10 div.post-inner {
+	padding-top: 0rem !important;
+}
+
+.entry-content p,
+.entry-content ol,
+.entry-content ul,
+.entry-content dl,
+.entry-content dt {
+	font-family: NonBreakingSpaceOverride, Quicksand,sans-serif;
+	letter-spacing: normal;
+}
+
+.ckout_container{
+	background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+a {
+	text-decoration: none;
+}
+
+span.ckout_price {
+  float: right;
+  color: #000;
+}
+
+article.post-10 p.has-text-align-left img{
+	float: left;
+	margin-right: 15px;
+}
+
+.site-title {
+		font-weight: 600;
+}
+
+.icon-container {
+  margin-bottom: 17px;
+  padding: 5px 0;
+  font-size: 24px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+article.post-82 a img:hover{
+	opacity: 0.7;
+}
+.icon_rounded {
+  padding: 10px !important;
+  font-size: 30px !important;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: #000;
+}
+
+/* Add a hover effect if you want */
+.icon_rounded:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+
+.fa-instagram {
+  background: #125688;
+  color: white !important;
+}
+
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE ;
+  color: white !important;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white !important;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+.img-comp-container {
+  position: relative;
+	padding-left: 190px;
+  height: 300px !important; /*should be the same height as the images*/
+}
+
+.img-comp-img {
+  position: absolute;
+  width: 200px ;
+  height: 300px;
+  overflow: hidden;
+}
+
+.img-comp-img img {
+  display: block;
+  vertical-align: middle;
+}
+
+.img-comp-slider {
+  position: relative;
+  z-index: 9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+	.header-inner {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		padding: 2.8rem 0;
+		padding-bottom: 0.5rem;
+	}
+
