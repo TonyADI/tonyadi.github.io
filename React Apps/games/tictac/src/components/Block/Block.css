@@ -1,0 +1,10 @@
+button {
+    background-color: rgb(241, 232, 232);
+    width: 5%;
+    height: 60px;
+    font-size: 30px;
+}
+
+.valign{
+    vertical-align: middle;
+}
