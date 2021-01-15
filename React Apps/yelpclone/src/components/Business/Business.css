@@ -1,0 +1,22 @@
+.business-container{
+    width: 28%;
+    float: left;
+    margin: 20px;
+    border: 1px solid  rgb(206, 201, 201);
+    border-radius: 5px;
+}
+
+.image{
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.business-details{
+    text-align: left;
+    margin-left: 10px;
+}
+
+.business-name{
+    color: #0376be;
+    margin: 0px;
+}
