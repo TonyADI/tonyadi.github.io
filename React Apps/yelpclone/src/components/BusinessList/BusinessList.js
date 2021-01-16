@@ -8,9 +8,9 @@ export class BusinessList extends React.Component{
                 {this.props.businesses.map((business) => {
                     return <Business businessid={business.id} businessname={business.name} 
                     businessrating={business.rating} 
-                    businessprice={business.price} businessrcount={business.review_count} 
-                    businessloc={business.location.city} 
-                    businesspic={business.pic} businesstitle={business.categories[0].title}/>
+                    businessprice={business.price} businessrcount={business.reviewCount} 
+                    businessloc={business.city} 
+                    businesspic={business.imageSrc} businesstitle={business.category}/>
                 })}
             </div>
         )
