@@ -6,7 +6,7 @@ import { Yelp } from '../../utilities/Yelp';
 import picture from '../../utilities/pictures/homepicture.jpg';
 
 
-const business1 = {id:'Toniz-Kidz-Ng', price:'$$', rating: '4.5', review_count: 90, name:'Toniz Kidz', 
+const business1 = {id:'Toniz-Kidz-Ng', price:'$$', rating: '2.5', reviewCount: 0, name:'Toniz Kidz', 
 location:{city:'Naij'}, imageSrc: picture, categories:[{alias:'1', title:'Japanese'}]}
 const businesses = [business1, business1, business1];
 
