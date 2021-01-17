@@ -4,14 +4,20 @@ import './SearchBar.css'
 export class SearchBar extends React.Component{
     constructor(props){
         super(props);
-        this.state = {term:'', location:'', sortBy:''}
+        this.state = {term:'', location:''}
         this.handleTermChange = this.handleTermChange.bind(this)
         this.handleSearch = this.handleSearch.bind(this)
         this.handleLocationChange = this.handleLocationChange.bind(this)
+        this.handleAutocomplete = this.handleAutocomplete.bind(this)
+    }
+
+    handleAutocomplete(term){
+        this.props.yelpAutocomplete(term);
     }
 
     handleTermChange(e){
         this.setState({term:e.target.value})
+        this.handleAutocomplete(this.state.term + e.target.value) // implement this properly
     }
 
     handleLocationChange(e){

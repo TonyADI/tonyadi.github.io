@@ -30,9 +30,21 @@
   padding-top: 200px; /*this too*/
 }
 
-.span-SR{
-  color: rgb(49, 49, 49);
+.service-type{
+  color: #888;
+  font-weight: 600;
   margin: 10px;
+}
+
+.location{
+  color: #666666;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.span-loc:hover{
+  padding-bottom: 9px;
+  border-bottom: 2px solid red;
 }
 
 .heading{

@@ -18,6 +18,15 @@
 }
 
 .business-name{
-    color: #0376be;
+    color: #0376be !important;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.business-name:hover{
+    text-decoration: underline;
+}
+
+.zero-margin{
     margin: 0px;
 }

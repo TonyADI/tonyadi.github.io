@@ -7,15 +7,15 @@ export class Business extends React.Component{
         return(
             <div className="business-container"> 
                 <div>
-                    <img src={this.props.businesspic} alt='' className="image"></img>
+                    <a href={this.props.businessurl}><img src={this.props.businesspic} alt='' className="image"></img></a>
                 </div>
                 <div className="business-details">
-                    <div><h4 className="business-name">{this.props.businessname}</h4></div> 
-                    <div>{this.props.businessrating} {this.props.businessrcount} review
+                    <div><h4 className='zero-margin'><a className="business-name"href={this.props.businessurl}>{this.props.businessname}</a></h4></div> 
+                    <div><Rating rating={this.props.businessrating}/> {this.props.businessrcount} review
                     {this.props.businessrcount != 1 ? 's': ''}</div>
                     <div>{this.props.businesstitle}</div>
                     <div>{this.props.businessloc}</div>
-                    <div><Rating count={this.props.businessrating}/></div>
+                    <div></div>
                 </div>
             </div>
         )

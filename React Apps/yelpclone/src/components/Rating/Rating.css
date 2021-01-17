@@ -9,3 +9,7 @@
 .star{
     color:white;
 }
+
+.rating-container{
+    display: inline;
+}
