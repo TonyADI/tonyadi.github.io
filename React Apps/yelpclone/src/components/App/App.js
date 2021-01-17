@@ -7,7 +7,7 @@ import picture from '../../utilities/pictures/homepicture.jpg';
 
 
 const business1 = {id:'Toniz-Kidz-Ng', price:'$$', rating: '2.5', reviewCount: 0, name:'Toniz Kidz', 
-city:'Naij', imageSrc: picture, category:'Japanese'}
+city:'Naij', imageSrc: picture, category:[{title:'Japanese'}, {title:'Yamcha'}]}
 const businesses = [business1, business1, business1];
 
 
@@ -25,6 +25,7 @@ class App extends React.Component{
 
   yelpAutocomplete(term){
     Yelp.autocomplete(term).then(terms => {this.setState({termsList: terms})});
+    //this.setState({termsList: [...this.state.termsList, {term:'test'}]})
   }
 
   render(){
@@ -35,7 +36,8 @@ class App extends React.Component{
             <div>
               <h1>Welp!</h1>
             </div>
-            <div><SearchBar yelpSearch={this.yelpSearch} yelpAutocomplete={this.yelpAutocomplete}/></div>
+            <div><SearchBar yelpSearch={this.yelpSearch} yelpAutocomplete={this.yelpAutocomplete} 
+            termsList={this.state.termsList}/></div>
             <div>
               <span className="service-type">Restaurants</span>
               <span className="service-type">Nightlife</span>
@@ -60,7 +62,6 @@ class App extends React.Component{
         <div className="mid2Section">
           <div><span class="span-heading">Hot {'&'} New Businesses</span></div>
           <div><BusinessList businesses={this.state.businesses}/></div>
-    <div>{this.state.termsList ? this.state.termsList.map((text) => { return <p>{text.term}</p>}) : <div>nada</div>}</div>
         </div>
       </div>
     );
