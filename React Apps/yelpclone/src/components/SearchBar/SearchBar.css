@@ -50,7 +50,6 @@ input:focus{
 }
 
 .dropdown{
-  border-top: 1px solid rgb(206, 201, 201);
   background-color: #fff;
   border-radius: 0px 0px 5px 5px;
   position: absolute;
@@ -58,16 +57,13 @@ input:focus{
   top: 30px;
   text-align: left;
   width: 102.5%; /** Fix */
+  margin-top: 1px;
   display: none;
 }
 
 .dropdown-location{
   left: 10px;
-  width: 97.5%; /** Fix */
-}
-
-.dropdown-item{
-  padding: 10px 20px;
+  width: 90%;
 }
 
 .dropdown-item:hover{
@@ -76,6 +72,17 @@ input:focus{
 }
 .input-BG:focus ~ .dropdown{
   display: block;
+}
+
+.dropdown-item{
+  display: block;
+  width: 100%;
+  padding: 11px 15px;
+  border: 0px;
+  border-radius: 0px 0px 5px 5px;
+  background-color: #fff;
+  text-align: left;
+  font-size: 16px;
 }
 
 .icon{

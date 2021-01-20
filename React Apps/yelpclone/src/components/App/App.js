@@ -5,16 +5,22 @@ import { SearchBar } from '../SearchBar/SearchBar'
 import { Yelp } from '../../utilities/Yelp';
 import picture from '../../utilities/pictures/homepicture.jpg';
 
-
+/*
 const business1 = {id:'Toniz-Kidz-Ng', price:'$$', rating: '2.5', reviewCount: 0, name:'Toniz Kidz', 
 city:'Naij', imageSrc: picture, category:[{title:'Japanese'}, {title:'Yamcha'}]}
-const businesses = [business1, business1, business1];
-
+const businessList = [business1, business1, business1];
+*/
+var longitude = '';
+var latitude = '';
+navigator.geolocation.getCurrentPosition((position) => {
+    longitude = position.coords.longitude; 
+    latitude = position.coords.latitude;
+});
 
 class App extends React.Component{
   constructor(props){
     super(props);
-    this.state = {businesses:businesses, termsList:[]}
+    this.state = {businesses:[], termsList:[], hotBusinesses:[]}
     this.yelpSearch = this.yelpSearch.bind(this)
     this.yelpAutocomplete = this.yelpAutocomplete.bind(this)
   }
@@ -25,7 +31,10 @@ class App extends React.Component{
 
   yelpAutocomplete(term){
     Yelp.autocomplete(term).then(terms => {this.setState({termsList: terms})});
-    //this.setState({termsList: [...this.state.termsList, {term:'test'}]})
+  }
+
+  componentDidMount(){
+    Yelp.sortBy(longitude, latitude, 3, 'rating').then(businesses => {this.setState({hotBusinesses: businesses})});
   }
 
   render(){
@@ -37,7 +46,7 @@ class App extends React.Component{
               <h1>Welp!</h1>
             </div>
             <div><SearchBar yelpSearch={this.yelpSearch} yelpAutocomplete={this.yelpAutocomplete} 
-            termsList={this.state.termsList}/></div>
+            termsList={this.state.termsList} latitude={latitude} longitude={longitude}/></div>
             <div>
               <span className="service-type">Restaurants</span>
               <span className="service-type">Nightlife</span>
@@ -60,8 +69,14 @@ class App extends React.Component{
           </div>
         </div>
         <div className="mid2Section">
-          <div><span class="span-heading">Hot {'&'} New Businesses</span></div>
-          <div><BusinessList businesses={this.state.businesses}/></div>
+          <div><span className="span-heading">Hot {'&'} New Businesses</span></div>
+          <div>
+            <BusinessList businesses={this.state.hotBusinesses}/>
+          </div>
+          <div>
+            <h4 className="heading">Search Results</h4>
+            <BusinessList businesses={this.state.businesses}/>
+            </div>
         </div>
       </div>
     );

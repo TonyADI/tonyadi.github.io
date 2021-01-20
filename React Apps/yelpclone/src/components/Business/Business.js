@@ -10,9 +10,10 @@ export class Business extends React.Component{
                     <a href={this.props.businessurl}><img src={this.props.businesspic} alt='' className="image"></img></a>
                 </div>
                 <div className="business-details">
-                    <div><h4 className='zero-margin'><a className="business-name"href={this.props.businessurl}>{this.props.businessname}</a></h4></div> 
+                    <div><h4 className='zero-margin'><a className="business-name"href={this.props.businessurl}>
+                        {this.props.businessname}</a></h4></div> 
                     <div><Rating rating={this.props.businessrating}/> {this.props.businessrcount} review
-                    {this.props.businessrcount != 1 ? 's': ''}</div>
+                    {this.props.businessrcount !== 1 ? 's': ''}</div>
                     <div>{this.props.businesstitle.map((category)=>{
                         return <span>{category.title} </span>
                     })}</div>
