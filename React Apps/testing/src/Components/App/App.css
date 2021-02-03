@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+  background-color: #6baff8;
+  height: 100vh;
+  font-family: Futura, 'sans-serif' !important;
+}
+
+@keyframes opposition {
+  0%{transform: rotate(0deg);}
+  10%{transform: rotate(-90deg);}
+  20%{transform: rotate(0deg);}
+  30%{transform: rotate(0deg);}
+  40%{transform: rotate(-90deg);}
+  50%{transform: rotate(0deg);}
+  60%{transform: rotate(0deg);}
+  70%{transform: rotate(-90deg);}
+  80%{transform: rotate(0deg);}
+}
+
+
+@keyframes player {
+  0%{transform: rotate(0deg);}
+  10%{transform: rotate(90deg);}
+  20%{transform: rotate(0deg);}
+  30%{transform: rotate(0deg);}
+  40%{transform: rotate(90deg);}
+  50%{transform: rotate(0deg);}
+  60%{transform: rotate(0deg);}
+  70%{transform: rotate(90deg);}
+  80%{transform: rotate(0deg);}
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+#player {
+  height: 100px;
+  margin-top: 20px;
+}
+.inlineDiv {
+  display: inline;
+  margin: 20px;
+}
+#opposition {
+  height: 100px;
+  margin-top: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
