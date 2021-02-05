@@ -12,6 +12,7 @@ const App = () => {
   const [wins, setWins] = useState(0);
   const [currentWins, setCurrentWins] = useState(0);
   const [color, setColor] = useState('')
+  const [tries, setTries] = useState(0);
 
   const startAnimation = () => {
     let player = document.getElementById('player');
@@ -28,9 +29,10 @@ const App = () => {
     }, 2000)
   }
 
-  const handleClick = (turn) => {
-    setTimeout(()=> setPlayer(turn), 1500);
+  const handleClick = choice => {
+    setTimeout(()=> setPlayer(choice), 1500);
     setTimeout(() => setOpposition(items[Math.floor(Math.random() * 3)]), 1500);
+    setTimeout(()=> setTries(tries + 1), 1500);
     startAnimation();
   }
 
@@ -42,6 +44,7 @@ const App = () => {
 
   const result = () => {
     if(player && opposition){
+      //alert(player + ' ' + opposition)
       if((player === 'Rock' && opposition === 'Scissors') || (player === 'Paper' && opposition === 'Rock') || 
       (player === 'Scissors' && opposition === 'Paper')){
         setResults('Winner!!');
@@ -67,7 +70,7 @@ const App = () => {
     setCurrentWins(0);
   }
 
-  useEffect(result, [opposition, player, color]);
+  useEffect(result, [tries]);
 
   return (
     <div className="App">
@@ -86,6 +89,7 @@ const App = () => {
           <div className="inlineDiv"><img src={fist} id='opposition' alt=''></img></div>
         </div>
         <div><h1 style={{color: color}}>{results}</h1></div>
+        <div><h1>Tries: {tries}</h1></div>
     </div>
   );
 }
