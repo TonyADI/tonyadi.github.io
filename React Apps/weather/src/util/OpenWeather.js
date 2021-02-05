@@ -3,8 +3,8 @@ export const getForecast = (long, lat) => {
     return fetch(`https://community-open-weather-map.p.rapidapi.com/forecast?units=metric&lat=${lat}&lon=${long}`, {
         "method": "GET",
         "headers": {
-            "x-rapidapi-key": "2374eea181msha6400f3c7ae0a84p1498bejsnf11abe35d8b7",
-            "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
+            "x-rapidapi-key": "",
+            "x-rapidapi-host": ""
         }
     })
     .then(response => {

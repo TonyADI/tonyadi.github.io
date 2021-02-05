@@ -23,8 +23,8 @@ export const Forecast = props => {
         fetch(`https://community-open-weather-map.p.rapidapi.com/weather?q=${uriEncodedCity}&units=${unit}`, {
             "method": "GET",
             "headers": {
-                "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
-                "x-rapidapi-key": "2374eea181msha6400f3c7ae0a84p1498bejsnf11abe35d8b7"
+                "x-rapidapi-host": "",
+                "x-rapidapi-key": ""
             }
         })
         .then(response => response.json())
