@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Task.css';
 
 export class Task extends React.Component{
@@ -13,8 +13,9 @@ export class Task extends React.Component{
 
     render(){
         return (
-            <div className='task'>{this.props.taskID} {this.props.taskInfo} <button>Done?</button> <button 
-            onClick={this.removeTask}>x</button> </div>
+            <div className='task-container'><span className='task'>{this.props.taskInfo}</span><button 
+            onClick={this.removeTask} className='remove'><i className="
+            fa fa-trash icon"></i></button> </div>
         )
     }
 }

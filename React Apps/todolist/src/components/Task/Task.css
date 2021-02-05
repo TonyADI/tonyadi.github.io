@@ -1,4 +1,26 @@
+.task-container{
+    border: 0.5px solid lightgrey;
+    margin: 5px auto;
+    border-radius: 2.5px;
+    text-align: left;
+    padding-bottom: 2.5px;
+}
+
 .task{
-    border-bottom: 1px solid black;
-    margin: auto;
+    padding-left: 10px;
+}
+
+.remove{
+    float: right;
+    background-color: #dc3545;
+    border: 0px;
+    padding: 4.5px;
+    border-radius: 0px 2.5px 2.5px 0px;
+}
+.icon{
+    color: #fff;
+}
+
+.remove:hover{
+    cursor: pointer;
 }

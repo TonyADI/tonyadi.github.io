@@ -22,6 +22,12 @@ const App = () => {
     setTask(e.target.value)
   }
 
+  const handleKeyPress = e => {
+    if(e.which === 13){
+      handleClick();
+    }
+  }
+
   const removeTask = task => {
     //const taskNo = this.state.tasks.indexOf(task);
     const newList = tasks.filter((i) => {return i !== task})
@@ -30,13 +36,13 @@ const App = () => {
 
   return (
       <div className="App">
-        
       <h1>Todo List</h1>
       <div>
-        <input type='text' placeholder='new task' value={task} onChange={handleChange}/>
+        <input type='text' placeholder='new task' value={task} 
+        onKeyPress={handleKeyPress} onChange={handleChange}/>
         <button onClick={handleClick}>Add</button>
         <Tasklist tasks={tasks} onClick={removeTask} listNo='1'/>
-        
+        {tasks.length && <div>{tasks.length} tasks left to complete</div>}
       </div>
       </div>
     );

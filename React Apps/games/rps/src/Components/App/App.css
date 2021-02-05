@@ -1,8 +1,12 @@
 .App {
   text-align: center;
-  background-color: #6baff8;
   height: 100vh;
-  font-family: Futura, 'sans-serif' !important;
+  font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  width: 30vw;
+  height: 70vh;
+  border: 1px solid lightgrey;
+  margin:50px auto;
+  border-radius: 5px;
 }
 
 @keyframes opposition {
@@ -65,15 +69,13 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.reset{
+  border: 0.5px solid #fff;
+  border-radius: 5px;
+  background-color: lightseagreen;
+  padding: 5px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reset:hover{
+  cursor: pointer
 }

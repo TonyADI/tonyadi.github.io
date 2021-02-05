@@ -1,36 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import Item from '../Item/Item';
+import Choice from '../Choice/Choice';
 import fist from './fist.png'
 
 
 var items = ['Rock', 'Paper', 'Scissors']
 const App = () => {
-  const [counter, setCounter] = useState('');
   const [opposition, setOpposition] = useState('');
   const [player, setPlayer] = useState('');
   const [results, setResults] = useState('');
   const [wins, setWins] = useState(0);
   const [currentWins, setCurrentWins] = useState(0);
+  const [color, setColor] = useState('')
 
   const startAnimation = () => {
     let player = document.getElementById('player');
     player.style.animationName = 'player';
-    player.style.animationDuration = '2.5s';
+    player.style.animationDuration = '2s';
     let opposition = document.getElementById('opposition');
     opposition.style.animationName = 'opposition';
-    opposition.style.animationDuration = '2.5s';
+    opposition.style.animationDuration = '2s';
     setTimeout(() => {
     player.style.animationName = '';
     player.style.animationDuration = '';
     opposition.style.animationName = '';
     opposition.style.animationDuration = '';
-    }, 3000)
+    }, 2000)
   }
 
   const handleClick = (turn) => {
-    setTimeout(()=> setPlayer(turn), 2000);
-    setTimeout(() => setOpposition(items[Math.floor(Math.random() * 3)]), 2000);
+    setTimeout(()=> setPlayer(turn), 1500);
+    setTimeout(() => setOpposition(items[Math.floor(Math.random() * 3)]), 1500);
     startAnimation();
   }
 
@@ -45,14 +45,17 @@ const App = () => {
       if((player === 'Rock' && opposition === 'Scissors') || (player === 'Paper' && opposition === 'Rock') || 
       (player === 'Scissors' && opposition === 'Paper')){
         setResults('Winner!!');
+        setColor('#28a745')
         setCurrentWins(currentWins + 1);
         setHighScore();
       }
       else if(player === opposition){
         setResults('Draw!!')
+        setColor('#ffc107')
       }
       else{
         setResults('Loser!!');
+        setColor('#dc3545')
       }
     }
   }
@@ -61,30 +64,28 @@ const App = () => {
     setResults('');
     setPlayer('');
     setOpposition('');
-    setCounter('');
     setCurrentWins(0);
   }
 
-  useEffect(result, [opposition, player]);
+  useEffect(result, [opposition, player, color]);
 
   return (
     <div className="App">
         <h1>Rock, Paper, Scissors!</h1>
-        <button style={{backgroundColor: 'Green'}}  onClick={newGame}>Reset</button>
+        <button className="reset" onClick={newGame}>Reset</button>
         <br />
-        <div>High Score: {wins}</div>
-        <div>Your Score: {currentWins} </div>
-        <div>Counter: {counter}</div>
-        <div>Opps:{opposition}</div>
+        <div>Longest Streak: {wins}</div>
+        <div>Current Streak: {currentWins} </div>
+        <div>Computer:{opposition}</div>
         <div>You: {player}</div>
-        <div>Result: {results}</div>
-        <Item name="Rock" onClick={handleClick}/>
-        <Item name="Paper" onClick={handleClick}/>
-        <Item name="Scissors" onClick={handleClick}/>
-        <div style={{width: '100%'}}>
+        <Choice name="Rock" onClick={handleClick}/>
+        <Choice name="Paper" onClick={handleClick}/>
+        <Choice name="Scissors" onClick={handleClick}/>
+        <div>
           <div className="inlineDiv"><img src={fist} id='player' alt=''></img></div>
           <div className="inlineDiv"><img src={fist} id='opposition' alt=''></img></div>
         </div>
+        <div><h1 style={{color: color}}>{results}</h1></div>
     </div>
   );
 }

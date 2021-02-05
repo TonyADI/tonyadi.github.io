@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import './Forecast.css';
 import Conditions from '../Conditions/Conditions'
+import { Display } from '../Display/Display'
 
-export const Forecast = () => {
+export const Forecast = props => {
     let [responseObj, setResponseObj] = useState({});
     let [city, setCity] = useState('');
     let [unit, setUnit] = useState('imperial');
@@ -19,19 +20,21 @@ export const Forecast = () => {
         setResponseObj({});
         setLoading(true);
         let uriEncodedCity = encodeURIComponent(city);
-        fetch(`https://community-open-weather-map.p.rapidapi.com/weather?q=${uriEncodedCity}`, {
+        fetch(`https://community-open-weather-map.p.rapidapi.com/weather?q=${uriEncodedCity}&units=${unit}`, {
             "method": "GET",
             "headers": {
-                "x-rapidapi-host": "", //redacted
-                "x-rapidapi-key": "" //redacted
+                "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
+                "x-rapidapi-key": "2374eea181msha6400f3c7ae0a84p1498bejsnf11abe35d8b7"
             }
         })
         .then(response => response.json())
-        .then(response => {
-            if(response.cod !== 200){
+        .then(jsonResponse => {
+            if(jsonResponse.cod !== 200){
                 throw new Error();
             }
-            setResponseObj(response);
+            // adding this
+            props.setCondition(jsonResponse.weather[0].main)
+            setResponseObj(jsonResponse);
             setLoading(false);
         })
         .catch(err => {
@@ -42,7 +45,7 @@ export const Forecast = () => {
     }
     return (
         <div>
-           <h2>Find Current Weather Conditions</h2>
+            <Display weatherObj={responseObj} setCondition={props.setCondition} />
            <form onSubmit={getForecast}>
                 <input
                     className="textInput"
@@ -50,7 +53,7 @@ export const Forecast = () => {
                     placeholder="Enter City"
                     maxLength="50"
                     value={city}
-                    onChange={(e) => setCity(e.target.value)}
+                    onChange={e => setCity(e.target.value)}
                     />
                 <label className="radio">
                     <input
