@@ -18,3 +18,25 @@ export const getForecast = (long, lat) => {
         console.error(err);
     });
 }
+
+export const searchForecast = async city => {
+    try{
+        let uriEncodedCity = encodeURIComponent(city);
+        let response = await fetch(`https://community-open-weather-map.p.rapidapi.com/weather?q=${uriEncodedCity}&units=metric`, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-key": "",
+                "x-rapidapi-host": ""
+            }
+        })
+        if(response.ok){
+            let jsonResponse = await response.json();
+            return jsonResponse ? {city: city, 
+                condition: jsonResponse.weather[0].main, temp: jsonResponse.main.temp} 
+                : null;
+        }
+    }
+    catch(error){
+        console.log(error)
+    }
+}

@@ -6,6 +6,7 @@
   margin: auto;
   border: 1px solid lightgrey;
   background-image: url(../../util/images/clear.jfif);
+  color: #fff;
 }
 
 .App-header {
@@ -40,4 +41,12 @@ footer {
 }
 header {
   padding: 25px;
+}
+
+#temperature{
+  font-size: 60px;
+}
+
+#capitalize:first-letter{
+  text-transform: capitalize;
 }

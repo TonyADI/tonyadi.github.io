@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Forecast } from '../Forecast/Forecast';
-//import { LocationIQ } from '../../util/LocationIQ';
-import { getForecast } from '../../util/OpenWeather';
-//import Logo from '../Logo/Logo'
+import { getForecast, searchForecast } from '../../util/OpenWeather';
+import { SearchBar } from '../SearchBar/SearchBar'
 
 let longitude = '';
 let latitude = '';
@@ -14,12 +12,13 @@ navigator.geolocation.getCurrentPosition((position) => {
 class App extends React.Component{
     constructor(props){
       super(props);
-      this.state ={city: '', condition: '', forecasts: [], time: null, 
+      this.state ={temperature: null, city: '', condition: '', forecasts: [], time: null, 
       imageUrl:'/static/media/clear.e2e3af24.jfif'}
       this.setCondition = this.setCondition.bind(this)
       this.clock = this.clock.bind(this)
       this.setBackground = this.setBackground.bind(this)
       this.handleForecast = this.handleForecast.bind(this)
+      this.handleSearch = this.handleSearch.bind(this)
     }
 
     setCondition(cond){
@@ -41,13 +40,21 @@ class App extends React.Component{
     handleForecast (){
       if(longitude && latitude){
         getForecast(longitude, latitude).then(forecast => {
-          this.setState({forecasts: forecast.forecasts, city: forecast.city})})
+          alert(forecast.forecasts)
+          this.setState({forecasts: forecast.forecasts, city: forecast.city, 
+          temperature: forecast.forecasts[0].main.temp, condition:
+        forecast.forecasts[0].weather[0].main})})
       }
     }
 
+    handleSearch(term){
+      searchForecast(term).then(forecast => {this.setState({city: forecast.city,
+         condition: forecast.condition, temperature: Math.floor(forecast.temp)})})
+    }
+
     componentDidMount(){
-      //setInterval(this.clock, 1000);
-      this.handleForecast();
+     // setInterval(this.clock, 0);
+      //this.handleForecast();
     }
 
     componentDidUpdate(){
@@ -59,12 +66,13 @@ class App extends React.Component{
         <div className="body" style={{backgroundImage: 
         `url(${this.state.imageUrl})`}}>
           <main>
-            <div>{this.state.time}</div>
-            <div><span>{this.state.city}</span></div>
-            <div>{this.state.forecasts[0] ? 
-            this.state.forecasts[0].weather[0].main : null}</div>
-            <div><span>{this.state.forecasts[0] ? 
-            Math.floor(this.state.forecasts[0].main.temp) + '°' : null}</span></div>
+            <div className="header">
+              <span>{this.state.time}</span>
+              <SearchBar handleSearch={this.handleSearch}/>
+              </div>
+            <div><span id="temperature">{`${this.state.temperature}°`}</span></div>
+            <div><span id="capitalize">{this.state.city}</span></div>
+            <div>{this.state.condition}</div>
           </main>
           <footer>
             Page created by TonyADI
