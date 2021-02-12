@@ -1,0 +1,13 @@
+.product-container{
+    width: 20%;
+    display: inline-block;
+    margin: auto 20px;
+}
+
+.image-container{
+    width: 100%;
+}
+
+.product-image{
+    width: 100%;
+}

@@ -1,0 +1,11 @@
+.jumbo{
+    background-image: url('../../utilities/images/image2.jfif');
+    background-size: cover;
+    height: 70vh;
+}
+
+.jumbo-header{
+    padding-top: 25vh;
+    margin: auto;
+    text-align: center;
+}
