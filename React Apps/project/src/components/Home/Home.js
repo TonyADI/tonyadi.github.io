@@ -11,7 +11,7 @@ export const Home = props => {
                 <div><h1 className="jumbo-header">Welcome</h1></div>
             </div>
             <div>Trending</div>
-            <div><ProductList productList={props.productList}/></div>
+            <div><ProductList products={props.productList}/></div>
         </div>
     )
 }

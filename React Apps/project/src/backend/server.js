@@ -43,8 +43,7 @@ app.post('/register', (req, res) => {
         }
         else{
             console.log('Account Created');
-            console.log(result)
-            res.status(204).send('Account Created')
+            res.status(201).send();
         }
     });
 })
@@ -62,21 +61,117 @@ app.post('/login', (req, res) => {
     console.log('Get for login working');
     console.log(req.body);
     connection.query(`SELECT * FROM User WHERE Email = '${req.body.email}' AND password = '${req.body.password}';`, (error, result) => {
-        if (error){
-            throw error;
-        }
+        if (error) throw error;
         if(result.length){
             console.log('Account found, login successful');
             console.log(result);
-            res.status(204).send('Account Found');
+            res.status(204).send();
         }
         else{
+            console.log(result)
             console.log('Credentials do not exist.');
             res.status(401).send('Credentials do not exist.')
         }
     });
 
 })
+
+
+app.delete('/account', (req, res) => {
+    console.log('Delete for account working');
+    console.log(req.body);
+    connection.query(`DELETE FROM USER WHERE email = '${req.body.email}';`, (error, result) => {
+        if (error) throw error;
+        console.log('Account deleted from database');
+        console.log(result);
+        res.status(204).send();
+        
+    })
+})
+
+// add acc details to url
+app.post('/account/details', (req, res) => {
+    console.log('Post for account details working');
+    console.log(req.params);
+    connection.query(`SELECT Email, first_name, last_name FROM USER WHERE email = '${req.body.email}';`, (error, result) => {
+        if(error) throw error;
+        console.log('Account details retreived');
+        console.log(result[0])
+        res.status(200).send(result[0]);
+    })
+})
+
+/*
+connection.query(`SELECT * FROM CATEGORY;`, (error, result) => {
+    if (error) throw error;
+    console.log(result[0]);
+})
+*/
+
+app.get('/sell/categories', (req, res) => {
+    console.log('Get for sell working');
+    connection.query(`SELECT * FROM CATEGORY;`, (error, result) => {
+        if (error) throw error;
+        console.log(result);
+        res.status(200).send(result)
+    })
+})
+
+
+app.get('/sell/categories/:name', (req, res) => {
+    console.log('Get for product list working');
+    connection.query(`SELECT * FROM PRODUCT WHERE category_name = '${req.params.name}' ORDER BY duration;`, (error, result) => {
+        if (error) throw error;
+        console.log(result);
+        res.status(200).send(result)
+    })
+})
+/*
+connection.query(`INSERT INTO product (category_name, buy_now, initial_price, duration) 
+VALUES ('iPhone 11', 1400, 900, 20)`, (error, result) => {
+    if (error) throw error;
+    console.log('Worked')
+    console.log(result);
+})
+*/
+app.post('/sell/products', (req, res) => {
+    console.log('Post for products working');
+    console.log(req.body);
+    connection.query(`INSERT INTO product (category_name, user_email, buy_now, initial_price, duration) VALUES ('${req.body.category}', '${req.body.account}', 
+    '${req.body.buyNow}', '${req.body.initialAsk}', '${req.body.duration}');`, 
+    (error, result) => {
+        if (error) throw error;
+        console.log('Product Created');
+        console.log(result)
+        res.status(201).send();
+    })
+})
+
+
+app.post('/account/listings', (req, res) => {
+    console.log('Post for account listings working');
+    console.log(req.body);
+    connection.query(`SELECT * FROM PRODUCT WHERE user_email = '${req.body.email}' ORDER BY duration;`, (error, result) => {
+        if (error) throw error;
+        console.log('Connection to database was successful');
+        console.log(result);
+        res.status(200).send(result);
+    })
+    
+})
+
+// might have to add param or query
+app.delete('/account/listings', (req, res) => {
+    console.log('Delete for account listings working');
+    console.log(req.body);
+    connection.query(`DELETE FROM product where user_email = '${req.body.email}' AND id='${req.body.id}';`, (error, result) => {
+        if (error) throw error;
+        console.log('Connection to database was successful');
+        console.log(result);
+        res.status(204).send();
+    });
+})
+
 
 app.listen(3000)
 

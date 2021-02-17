@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Register } from '../Register/Register';
-import { Login } from '../Login/Login';
+import { Authenticate } from '../Authenticate/Authenticate';
 import { Navbar } from '../Navbar/Navbar';
 import { Home } from '../Home/Home';
 import { Browse } from '../Browse/Browse';
 import { Sell } from '../Sell/Sell';
-import { Account } from '../Account/Account'
+import { Account } from '../Account/Account';
 import './App.css';
 import picture from '../../utilities/images/xps.jfif';
 
 const App = () => {
-  const product = {name: 'HP Spectre X360', currentAsk: 1840, buyNow: 2500, imageSrc: picture}
+  const product = {category_name: 'HP Spectre X360', initial_price: 1840, buy_now: 2500, duration: 20, imageSrc: picture}
   const productList = [product, product, product, product]
 
-  const [account, setAccount] = useState('');
-  const [signedIn, setSignedIn] = useState(false);
+  const [account, setAccount] = useState('test@tester.com'); // set to ''
+  const [signedIn, setSignedIn] = useState(true);
+
+
   
   return (
     <Router>
@@ -26,16 +27,16 @@ const App = () => {
             <Browse />
           </Route>
           <Route path="/sell">
-            <Sell />
+            <Sell account={account}/>
           </Route>
           <Route path="/register">
-            <Register handleSignedIn={setSignedIn} setAccount={setAccount}/>
+            <Authenticate title='Register' handleSignedIn={setSignedIn} setAccount={setAccount}/>
           </Route>
           <Route path="/login">
-            <Login handleSignedIn={setSignedIn} setAccount={setAccount}/>
+            <Authenticate title='Login' handleSignedIn={setSignedIn} setAccount={setAccount}/>
           </Route>
           <Route path="/account">
-            <Account />
+            {signedIn && <Account setSignedIn={setSignedIn} setAccount={setAccount} account={account}/> /*temporary solution*/}
           </Route>
           <Route path="/">
             <Home productList={productList}/>
