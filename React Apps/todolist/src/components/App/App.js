@@ -9,9 +9,9 @@ const App = () => {
   
   const handleClick = () => {
     if(task){
-      let incr = id + 1;
-      setTasks([...tasks, incr + task])
-      setId(incr)
+      let newId = id + 1;
+      setTasks([...tasks, {id:newId, info: task}])
+      setId(newId);
     }
     else{
       alert('Error! Task cannot be empty.')
@@ -28,21 +28,23 @@ const App = () => {
     }
   }
 
-  const removeTask = task => {
-    //const taskNo = this.state.tasks.indexOf(task);
-    const newList = tasks.filter((i) => {return i !== task})
-    setTasks(newList);
+  const deleteTask = taskId => {
+    console.log(taskId)
+    const newTasks = tasks.filter(task => {return task.id !== taskId})
+    setTasks(newTasks);
   }
 
   return (
-      <div className="App">
+      <div className="App-body">
       <h1>Todo List</h1>
       <div>
-        <input type='text' placeholder='new task' value={task} 
-        onKeyPress={handleKeyPress} onChange={handleChange}/>
-        <button onClick={handleClick}>Add</button>
-        <Tasklist tasks={tasks} onClick={removeTask} listNo='1'/>
-        {tasks.length && <div>{tasks.length} tasks left to complete</div>}
+        <div className="container tasklist">
+          <input type='text' placeholder='Enter Task' value={task} 
+          onKeyPress={handleKeyPress} onChange={handleChange} className="input-container"/>
+          <button onClick={handleClick} className="add-button button"><i className ="fa fa-plus icon"></i></button>
+        </div>
+        <div><Tasklist tasks={tasks} onClick={deleteTask}/></div>
+        {tasks.length ? <div>{tasks.length} tasks left to complete</div> : <div>No Tasks to Complete</div>}
       </div>
       </div>
     );
