@@ -85,7 +85,7 @@ const App = () => {
         <br />
         <div>Longest Streak: {topWins}</div>
         <div>Current Streak: {currentWins} </div>
-        <div>Computer:{opposition}</div>
+        <div>Computer: {opposition}</div>
         <div>You: {player}</div>
         {choices.map(choice => <Choice key={choices.indexOf(choice)} name={choice} onClick={handleClick} disabled={disabled}/>)}
         <div>
