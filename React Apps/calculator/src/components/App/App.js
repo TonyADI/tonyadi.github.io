@@ -1,21 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import { Result } from '../Result/Result';
 import { Keypad } from '../Keypad/Keypad';
+import './App.css';
 
 class App extends React.Component{
     constructor(props){
       super(props);
-      this.state = {result: ''}
-      this.handleClick = this.handleClick.bind(this)
+      this.state = {result: ''};
+      this.handleClick = this.handleClick.bind(this);
       this.calculate = this.calculate.bind(this);
       this.backspace = this.backspace.bind(this);
-      this.clear = this.clear.bind(this)
+      this.clear = this.clear.bind(this);
     }
 
     calculate(){
       try {
+        // eval is safe in this context because user input is constrained to numbers and expressions.
         const ans = String(eval(this.state.result))
         this.setState({result: ans})
       } catch (e) {
@@ -33,20 +33,21 @@ class App extends React.Component{
     clear(){
       this.setState({result: ''})
     }
+
     handleClick(val){
-      if(val == '='){
+      if(val === '='){
         this.calculate();
       }
-      else if(val == 'CE'){
+      else if(val === 'CE'){
         this.clear();
       }
-      else if(val == 'C'){
+      else if(val === 'C'){
         this.backspace();
       }
       else{
         let oldResult = this.state.result;
-        oldResult += val;
-        this.setState({result: oldResult})
+        const newResult = oldResult += val;
+        this.setState({result: newResult})
       }
     }
 

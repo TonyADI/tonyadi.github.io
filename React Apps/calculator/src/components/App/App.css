@@ -4,18 +4,6 @@
   color: #321863;
 }
 
-.result {
-  height: 60px;
-  background-color: #bbb;
-  width: 100%;
-}
-
-.result p {
-  font-size: 40px;
-  margin: 5px;
-
-}
-
 .calculator-body {
   max-width: 400px;
   margin: auto;

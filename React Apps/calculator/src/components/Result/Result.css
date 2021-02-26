@@ -1,6 +1,17 @@
 .result {
-  height: 50px;
-  background-color: #fff;
   width: 98%;
   font-size: 30px;
+  height: 60px;
+  background-color: rgb(253, 253, 253);
+  padding: 0px 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  border-bottom: 0;;
+}
+
+.result p {
+  font-size: 40px;
+  margin: 5px;
+
 }
