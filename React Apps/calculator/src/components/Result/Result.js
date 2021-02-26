@@ -5,7 +5,7 @@ export class Result extends React.Component {
     render(){
         return (
             <div>
-                <input className="result" value={this.props.result} disabled={true}></input>
+                <input className="result" value={this.props.result} disabled></input>
             </div>
         );
     }
