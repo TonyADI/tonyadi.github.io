@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Choice from '../Choice/Choice';
-import fist from './fist.png'
+import left from './left.png';
+import right from './right.png';
 
 
-var items = ['Rock', 'Paper', 'Scissors']
 const App = () => {
+  const choices = ['Rock', 'Paper', 'Scissors'];
   const [opposition, setOpposition] = useState('');
   const [player, setPlayer] = useState('');
   const [results, setResults] = useState('');
-  const [wins, setWins] = useState(0);
+  const [topWins, setTopWins] = useState(0);
   const [currentWins, setCurrentWins] = useState(0);
-  const [color, setColor] = useState('')
+  const [color, setColor] = useState('');
   const [tries, setTries] = useState(0);
+  const [disabled, setDisabled] = useState(false);
 
   const startAnimation = () => {
     let player = document.getElementById('player');
@@ -26,25 +28,28 @@ const App = () => {
     player.style.animationDuration = '';
     opposition.style.animationName = '';
     opposition.style.animationDuration = '';
-    }, 2000)
+    setDisabled(false);
+    }, 1600)
   }
 
   const handleClick = choice => {
-    setTimeout(()=> setPlayer(choice), 1500);
-    setTimeout(() => setOpposition(items[Math.floor(Math.random() * 3)]), 1500);
-    setTimeout(()=> setTries(tries + 1), 1500);
+    setDisabled(true);
+    setTimeout(() => {
+      setPlayer(choice);
+      setOpposition(choices[Math.floor(Math.random() * 3)]);
+      setTries(tries + 1);
+    }, 1500);
     startAnimation();
   }
 
   const setHighScore = () => {
-    if(currentWins >= wins){
-      setWins(currentWins + 1)
+    if(currentWins >= topWins){
+      setTopWins(currentWins + 1)
     }
   }
 
   const result = () => {
     if(player && opposition){
-      //alert(player + ' ' + opposition)
       if((player === 'Rock' && opposition === 'Scissors') || (player === 'Paper' && opposition === 'Rock') || 
       (player === 'Scissors' && opposition === 'Paper')){
         setResults('Winner!!');
@@ -68,25 +73,26 @@ const App = () => {
     setPlayer('');
     setOpposition('');
     setCurrentWins(0);
+    setTries(0)
   }
 
   useEffect(result, [tries]);
 
   return (
-    <div className="App">
+    <div className="App-body">
         <h1>Rock, Paper, Scissors!</h1>
-        <button className="reset" onClick={newGame}>Reset</button>
+        <button className="reset button" onClick={newGame}>Reset</button>
         <br />
-        <div>Longest Streak: {wins}</div>
+        <div>Longest Streak: {topWins}</div>
         <div>Current Streak: {currentWins} </div>
         <div>Computer:{opposition}</div>
         <div>You: {player}</div>
-        <Choice name="Rock" onClick={handleClick}/>
-        <Choice name="Paper" onClick={handleClick}/>
-        <Choice name="Scissors" onClick={handleClick}/>
+        {choices.map(choice => <Choice key={choices.indexOf(choice)} name={choice} onClick={handleClick} disabled={disabled}/>)}
         <div>
-          <div className="inlineDiv"><img src={fist} id='player' alt=''></img></div>
-          <div className="inlineDiv"><img src={fist} id='opposition' alt=''></img></div>
+          <div className="inline-display fists-container"><img src={left} id='player' 
+          alt='a cartoon left fist'></img></div>
+          <div className="inline-display fists-container"><img src={right} id='opposition' 
+          alt='a cartoon right fist'></img></div>
         </div>
         <div><h1 style={{color: color}}>{results}</h1></div>
         <div><h1>Tries: {tries}</h1></div>

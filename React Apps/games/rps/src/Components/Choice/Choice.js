@@ -7,8 +7,9 @@ const Choice = (props) => {
     }
 
     return (
-    <div style={{display: 'inline'}}>
-        <button className="choice"onClick={handleClick}>{props.name}</button>
+    <div className="inline-display">
+        <button className="choice button" onClick={handleClick} 
+        disabled={props.disabled}>{props.name}</button>
     </div>
     )
 }
