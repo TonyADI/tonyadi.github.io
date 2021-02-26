@@ -20,7 +20,7 @@ export default class App extends React.Component{
     render() {
       return (
         <div className="App">
-          <h1>Monach <p>By TonyADI</p></h1>
+          <h1>Ravenous <p>By TonyADI</p></h1>
           <SearchBar searchYelp={this.searchYelp}/>
           <BusinessList businesses={this.state.businesses} />
     </div>

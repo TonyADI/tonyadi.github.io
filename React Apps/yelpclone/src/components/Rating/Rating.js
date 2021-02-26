@@ -7,11 +7,11 @@ export class Rating extends React.Component{
         this.rating = this.rating.bind(this)
     }
 
-    rating(i){
-       if(this.props.rating - i === 0.5){
+    rating(value){
+       if((this.props.rating - value) === 0.5){
             return {background: 'linear-gradient(to right, rgb(219, 95, 95) 50%, rgb(206, 201, 201) 0%)'};
            }
-       else if(this.props.rating > i){
+       else if(this.props.rating > value){
             return {backgroundColor: 'rgb(219, 95, 95)'};
        }
     }

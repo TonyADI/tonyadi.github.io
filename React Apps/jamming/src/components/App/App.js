@@ -1,4 +1,3 @@
-// Personalized version of Jamming from codecademy
 import React from 'react';
 import './App.css';
 import { SearchBar } from '../SearchBar/SearchBar';

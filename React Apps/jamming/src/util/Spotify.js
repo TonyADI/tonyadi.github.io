@@ -1,9 +1,9 @@
-var accessToken = undefined;
-var expiresIn = undefined;
+let accessToken = '';
+let expiresIn = '';
 const redirectUri = 'http://localhost:3000/';
-const clientId = undefined;
+const clientId = '';
 const spotifyUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUri}`;
-export const Spotify = {getAccessToken : function() {
+export const Spotify = {getAccessToken : () => {
         if(accessToken){
             return accessToken;
         }
@@ -21,11 +21,11 @@ export const Spotify = {getAccessToken : function() {
         }
                 
     },
-    savePlaylist : function(name, trackUris) {
+    savePlaylist : (name, trackUris) => {
         if(name && trackUris){
             const headers = {Authorization: `Bearer ${accessToken}`}
-            let playlistId = undefined;
-            let userId = undefined;
+            let playlistId = '';
+            let userId = '';
             fetch('https://api.spotify.com/v1/me', {headers: headers}).then(response => response.json())
             .then(jsonResponse => userId = jsonResponse.id)
             .then(() => {
@@ -78,4 +78,3 @@ export const Spotify = {getAccessToken : function() {
         })
     }
 };
-

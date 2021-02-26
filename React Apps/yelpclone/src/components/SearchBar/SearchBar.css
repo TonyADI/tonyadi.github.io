@@ -1,22 +1,22 @@
-.label-BG{
+.label-background{
     background-color: #fff;
     padding: 5px 0px 9px;
     border-radius: 5px;
 }
 
-.span-BG{
+.span-background{
   background-color: #fff;
   font-weight: bold;
   margin-top: 5px;
   color: rgb(100, 100, 100);
 }
 
-.span-BG2{
+.near-span{
     border-left: 1px solid rgb(206, 201, 201);
     padding-left: 10px;
 }
 
-.input-BG{
+.input-background{
     border: 0px;
     width: 80%;
     margin-left: 10px;
@@ -25,11 +25,12 @@
 input:focus{
     outline: none;
 }
-.submit-BG{
+
+.submit-background{
     background-color: rgb(211, 35, 35);
     border: 0px;
     border-radius: 0px 5px 5px 0px;
-    height: 36px; /* probably wrong way to do this */
+    height: 36px;
     transition: 0.4s;
 }
 
@@ -38,12 +39,12 @@ input:focus{
   padding: 0px 10px;
 }
 
-.submit-BG:hover{
+.submit-background:hover{
   filter: brightness(0.8);
   cursor: pointer;
 }
 
-.inline-display{
+.input-container{
   display: inline-block;
   position: relative;
   width: 400px;
@@ -56,22 +57,19 @@ input:focus{
   z-index: 1;
   top: 30px;
   text-align: left;
-  width: 102.5%; /** Fix */
+  width: 102.5%;
   margin-top: 1px;
   display: none;
 }
 
 .dropdown-location{
   left: 10px;
-  width: 90%;
+  width: 97.5%;
 }
 
 .dropdown-item:hover{
   background-color: rgb(50, 132, 184);
   color: #fff;
-}
-.input-BG:focus ~ .dropdown{
-  display: block;
 }
 
 .dropdown-item{
