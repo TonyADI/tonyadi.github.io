@@ -1,10 +1,11 @@
 button {
-    background-color: rgb(241, 232, 232);
-    width: 5%;
-    height: 60px;
-    font-size: 30px;
+    background-color: rgb(231, 231, 231);
+    width: 33.333%;
+    height: 120px;
+    font-size: 60px;
+    border: 1px solid #000;
 }
 
-.valign{
+.v-align{
     vertical-align: middle;
 }
