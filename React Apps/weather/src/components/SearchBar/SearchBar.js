@@ -10,7 +10,8 @@ export const SearchBar = props => {
 
     const handleKeyPress = e => {
         if(e.which === 13){
-            props.handleSearch(term)
+            const capitalizedTerm = term.charAt(0).toUpperCase() + term.slice(1)
+            props.handleSearch(capitalizedTerm)
         }
     }
     return(

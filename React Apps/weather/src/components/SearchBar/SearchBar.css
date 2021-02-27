@@ -1,6 +1,7 @@
 .icon{
     color: #fff;
     padding-right: 5px;
+    font-size: 25px;
 }
 
 .search-container{
@@ -13,23 +14,14 @@
     border: 0;
     border-radius: 20px;
     padding: 2.5px 5px;
-}
-
-.search-bar:focus{
-    width: 100px;
-    opacity: 1;
+    font-size: 20px;
 }
 
 .search-bar:focus{
     outline: none;
 }
 
-.icon:hover ~ .search-bar{
-    opacity: 1;
-    width: 100px;
-}
-
-.search-bar:hover{
+.icon:hover ~ .search-bar, .search-bar:hover, .search-bar:focus{
     opacity: 1;
     width: 100px;
 }
