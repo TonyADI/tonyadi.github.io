@@ -12,7 +12,7 @@ export class Block extends React.Component{
     }
     render(){
         return(
-            <button onClick={this.handleClick} className="v-align">{this.props.value}
+            <button onClick={this.handleClick} className="v-align" disabled={this.props.value}>{this.props.value}
             </button>
         )
     }
