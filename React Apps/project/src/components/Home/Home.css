@@ -1,11 +1,25 @@
-.jumbo{
-    background-image: url('../../utilities/images/image2.jfif');
-    background-size: cover;
-    height: 70vh;
+.home-container .aside-container{
+    height: 300px;
+    width: 90%;
+    margin: auto;
+    border: 1px solid lightgrey;
+    background-image: url('https://i.ebayimg.com/images/g/chcAAOSwxKBfrBVH/s-l1600.webp');
 }
 
-.jumbo-header{
-    padding-top: 25vh;
-    margin: auto;
-    text-align: center;
+.aside-container .collection-text{
+    font-size: 30px;
+    font-weight: bolder;
+    color: #fff;
+    padding: 20px;
+    padding-top: 80px;
+}
+
+.aside-container .button{
+    background-color: rgb(0, 0, 0, 1);
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 20px;
+    width: auto;
+
 }

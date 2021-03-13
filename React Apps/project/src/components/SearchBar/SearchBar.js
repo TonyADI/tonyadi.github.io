@@ -9,10 +9,6 @@ export const SearchBar = props => {
     }
 
    const handleKeyPress = e => {
-    if(e.which === 13){
-        alert('clicked')
-        console.log('clicked');
-    }
    }
     
     return (

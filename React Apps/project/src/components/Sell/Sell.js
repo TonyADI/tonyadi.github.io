@@ -1,110 +1,144 @@
-import React, { useState } from 'react';
-import { SearchBar } from '../SearchBar/SearchBar';
+import React, { useState, useEffect } from 'react';
+import { Category } from '../Category/Category';
+import { CategoryList } from '../CategoryList/CategoryList';
 import { Product } from '../Product/Product';
-import { ProductList } from '../ProductList/ProductList';
-import { createProduct, retrieveData } from '../../utilities/projectAPI';
+import { SearchBar } from '../SearchBar/SearchBar';
+import { createData, retrieveData } from '../../utilities/projectAPI';
 import './Sell.css';
 
 export const Sell = props => {
-    const [buyNow, setBuyNow] = useState('');
     const [initialAsk, setInitialAsk] = useState('');
+    const [buyNow, setBuyNow] = useState('');
     const [duration, setDuration] = useState('');
     const [category, setCategory] = useState('');
-    const [categories, setCategories] = useState([]);
-    const [products, setProducts] = useState([])
+    const [categories, setCategories] = useState('');
+    const [validData, setValidData] = useState(false);
     const [display, setDisplay] = useState('none');
 
-    const handleCategories = () => {
-        retrieveData(window.location.href, 'categories').then(data => {
+    const retrieveCategories = () => {
+        retrieveData('https://localhost:3000/categories').then(data => {
             setCategories(data)});
     }
 
-    const handleProducts = () => {
-        const path = encodeURI('categories/iPhone 11');
-        retrieveData(window.location.href, path).then(data => {
-            setProducts(data)
-        })
+    const addNewCategory = () => {
+    }
+
+    const canSubmit = () => {
+        if((initialAsk < buyNow) && (buyNow > 0) && duration){
+          setValidData(true);
+        }
+        else{
+          setValidData(false);
+        }
     }
 
     const handleChange = e => {
         switch(e.target.name){
             case 'initial-ask':
-                setInitialAsk(e.target.value);
+                if(e.target.value >= 0){
+                    setInitialAsk(parseInt(e.target.value));
+                }
                 break;
             case 'buy-now':
-                setBuyNow(e.target.value);
+                if(e.target.value >= 0){
+                    setBuyNow(parseInt(e.target.value));
+                }
                 break;
             case 'duration':
-                setDuration(e.target.value);
+                const now = new Date().getTime();
+                const date = new Date(e.target.value).getTime();
+                const difference = date - now;
+                if(difference > 3600000){
+                    setDuration(e.target.value);
+                    break;
+                }
                 break;
             default:
-                console.log('didnt work bro')
+                console.log('There was an error');
         }
     }
 
 
     const handleSubmit = e => {
-        const data = {category: 'iPhone 11', account: props.account, buyNow: buyNow, initialAsk: initialAsk, 
-            duration: duration};
-        createProduct(window.location.href, data).then(value => {
+        const data = {category: category, account: props.account, buy_now: buyNow, 
+            initial_ask: initialAsk, duration: duration};
+        createData('https://localhost:3000/products', data).then(value => {
             if(value){
-                console.log('Product was created.')
+                alert('Listing was created.');
+            }else{
+                console.log('Product was not listed.')
             }
+
         })
+        setDisplay('none')
         e.preventDefault();
     }
 
-    window.onclick = e => {
-        const productModal = document.getElementById('result-container');
-        if(e.target === productModal){
+    const handleClick = name => {
+        if(props.account){
+            setDisplay('flex');
+            setCategory(name);
+        }else{
+            window.location.replace('/login');
+        }
+    }
+
+    const handleDisplay = e => {
+        const sellModal = document.getElementById('result-container');
+        if(e.target === sellModal){
             setDisplay('none');
         }
     }
 
+    useEffect(() => {
+        document.addEventListener('mousedown', handleDisplay);
+        retrieveCategories();
+    }, [])
+
     return(
         <div id="sell-body">
-            <div id="searchbar-heading"><h1>What item are you trying to Sell</h1></div>
-            <div id="search-bar">
-                <SearchBar />
-                {categories ? categories.map(category => {return <div>{category.name}</div>}) : null}
-                <button onClick={handleCategories}>Display Categories</button>
-                <div onClick={() => {
-                    setDisplay('flex')}}>List an iPhone 11</div>
-                <div onClick={handleProducts}>Display iPhone 11's</div>
-                    <ProductList products={products}/>
-
-
-                    {//make result container a component?
-                    }
+            <div>
+                <div id="searchbar-heading"><h1>What product are you trying to list</h1></div>
+                <div id="search-bar">
+                    <SearchBar />
+                </div>
+            </div>
+            <div>
+                <CategoryList categories={categories} handleClick={handleClick}/>
+                <div className="inline-display" onClick={addNewCategory}>
+                    <Category name="New Category" src="https://img.icons8.com/ios-glyphs/64/ffffff/plus-math.png"/>
+                </div>
+            </div>
                 <div id='result-container' style={{display: display}}>
-                    <div id='result-flex'>
-                        <div>
-                            <Product />
+                    <div id='sample-flex'>
+                        <div id="sample-listing">
+                            <Product name={category} sample={true} initialAsk={initialAsk} currentAsk={0} 
+                            buyNow={buyNow} duration={duration}/>
                         </div>
                     </div>
                     <div id='form-flex'>
-                    <form onSubmit={handleSubmit}>
-                        <label>
-                        <div className="input-container">
-                            <span>Initial Ask</span><input className="input-field" type="number" 
-                            name="initial-ask" placeholder="Enter Amount" value={initialAsk} onChange={handleChange}/>
-                        </div>
-                        <div className="input-container">
-                            <span>Final Ask</span><input className="input-field" type="number" name="buy-now" 
-                            placeholder="Enter Amount" value={buyNow} onChange={handleChange}/>
-                        </div>
-                        <div className="input-container">
-                            <span>Duration</span><input className="input-field" type="number" name="duration" 
-                            placeholder="Enter Amount" value={duration} onChange={handleChange}/>
-                            <span>Hours</span>
-                        </div>
-                        </label>
-                        <input  type="submit" 
-                        value="List Product" id="authenticate-button"/>
-                    </form>
+                        <form onSubmit={handleSubmit}>
+                            <div className="input-container">
+                                <span>Initial Ask</span><input className="input-field" type="number" onBlur={canSubmit}
+                                name="initial-ask" placeholder="Enter Amount (Less than Final Ask)" 
+                                value={initialAsk} onChange={handleChange}/>
+                            </div>
+                            <div className="input-container">
+                                <span>Final Ask</span><input className="input-field" type="number" name="buy-now" 
+                                placeholder="Enter Amount (At least 1)" value={buyNow} onChange={handleChange} 
+                                onBlur={canSubmit}/>
+                            </div>
+                            <div className="input-container">
+                                <span>Duration</span><input className="input-field" type="datetime-local" name="duration" 
+                                value={duration} onChange={handleChange} onBlur={canSubmit}/>
+                                {!duration && <div className="error-message">Duration needs to be at least an hour</div>}
+                            </div>
+                            <input  type="submit" style={{cursor: validData ? 'pointer' : 'default', 
+                            backgroundColor: validData ? '#000' : 'grey'}}
+                            value="List Product" className="button" disabled={!validData}/>
+                        </form>
                     </div>
                 </div>
-            </div>
         </div>
     )
 }

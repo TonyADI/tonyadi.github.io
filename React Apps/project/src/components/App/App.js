@@ -1,47 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Authenticate } from '../Authenticate/Authenticate';
-import { Navbar } from '../Navbar/Navbar';
-import { Home } from '../Home/Home';
-import { Browse } from '../Browse/Browse';
-import { Sell } from '../Sell/Sell';
 import { Account } from '../Account/Account';
+import { Authenticate } from '../Authenticate/Authenticate';
+import { Browse } from '../Browse/Browse';
+import { Footer } from '../Footer/Footer';
+import { Home } from '../Home/Home';
+import { Navbar } from '../Navbar/Navbar';
+import { Sell } from '../Sell/Sell';
 import './App.css';
-import picture from '../../utilities/images/xps.jfif';
 
 const App = () => {
-  const product = {category_name: 'HP Spectre X360', initial_price: 1840, buy_now: 2500, duration: 20, imageSrc: picture}
-  const productList = [product, product, product, product]
-
-  const [account, setAccount] = useState('test@tester.com'); // set to ''
-  const [signedIn, setSignedIn] = useState(true);
-
-
-  
+  const [account, setAccount] = useState('');
+  const [userId, setUserId] = useState(0);
   return (
     <Router>
       <div id="app-body">
-        <Navbar signedIn={signedIn}/>
+        <Navbar account={account}/>
         <Switch>
           <Route path="/browse">
-            <Browse />
+            <Browse account={account}/>
           </Route>
           <Route path="/sell">
             <Sell account={account}/>
           </Route>
-          <Route path="/register">
-            <Authenticate title='Register' handleSignedIn={setSignedIn} setAccount={setAccount}/>
-          </Route>
-          <Route path="/login">
-            <Authenticate title='Login' handleSignedIn={setSignedIn} setAccount={setAccount}/>
-          </Route>
-          <Route path="/account">
-            {signedIn && <Account setSignedIn={setSignedIn} setAccount={setAccount} account={account}/> /*temporary solution*/}
-          </Route>
+          {!account && <Route path="/register">
+            <Authenticate type='Register' setAccount={setAccount} setUserId={setUserId}/>
+          </Route>}
+          {!account && <Route path="/login">
+            <Authenticate type='Login' setAccount={setAccount} setUserId={setUserId}/>
+          </Route>}
+          {account && <Route path="/account">
+             <Account account={account} setAccount={setAccount} setUserId={setUserId} 
+             userId={userId}/>
+          </Route>}
           <Route path="/">
-            <Home productList={productList}/>
+            <Home account={account}/>
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
