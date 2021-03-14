@@ -225,10 +225,10 @@ app.get('/products', (req, res) => {
             })
             break;
         case 'recent':
-            // Fetch 15 products that were recently bid on.
+            // Fetch 15 products that were recently bid on. Not currently implemented correctly
             connection.query(`SELECT * FROM PRODUCT WHERE duration > (select current_timestamp()) AND 
             sold = false AND user_email <> ? AND product.id IN (SELECT DISTINCT product_id FROM 
-                    bid ORDER BY id desc) LIMIT 15;`, [req.query.acc], (error, result) => {
+                    bid) ORDER BY id desc LIMIT 15;`, [req.query.acc], (error, result) => {
                         if (error) throw error;
                         console.log('Products successfully retrieved.')
                         if(result.length){

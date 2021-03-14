@@ -1,19 +1,18 @@
-#search-bar{
+#sell-body #search-bar{
     margin:auto;
     width: 50vw;
     text-align: left;
+}
+
+#searchbar-heading{
+    margin-top: 30vh;
+    text-align: center;
 }
 
 #sample-listing > div.product-container{
     width: 100% !important;
     margin: 0px;
     border: 0px;
-
-}
-
-#searchbar-heading{
-    margin-top: 30vh;
-    text-align: center;
 }
 
 #result-container{
@@ -22,8 +21,8 @@
     top: 0px;
     width: 100%;
     border: 1px solid #000;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.3); /* Black w/ opacity */
+    background-color: #555;
+    background-color: rgba(0,0,0,0.3);
     z-index: 1;
     padding-bottom: 200px;
 }

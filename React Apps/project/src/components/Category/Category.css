@@ -1,14 +1,11 @@
 .category-container{
     display: inline-block;
     margin: 15px;
-    width: 116px; /* fix this */
+    width: 116px;
 }
 
-.category-container:hover{
-    cursor: pointer;
-}
 .category-background{
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: rgb(233, 245, 252);
     padding: 20px;
 }

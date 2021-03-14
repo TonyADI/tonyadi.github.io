@@ -166,7 +166,7 @@ export const Authenticate = (props) => {
               }
               <div className="terms-container cursor-pointer" onClick={()=>
                   {setChecked(!checked)}}>
-                <input type="checkbox" name="terms" id="termsCheckbox" checked={checked}/>
+                <input type="checkbox" name="terms" id="termsCheckbox" onChange={() => setChecked(!checked)} checked={checked}/>
                 <span id="terms"> By signing {props.type === 'Register' ? 'up' : 'in'}, you agree to the Terms of Service and 
                   Privacy Policy</span>
               </div>

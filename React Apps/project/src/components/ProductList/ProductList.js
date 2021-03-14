@@ -63,8 +63,8 @@ export const ProductList = props => {
                     </div>
             </div>
             <div className='carousel-nav'>
-                        <button className="prev"><i className="fa fa-angle-left direction-icon"></i></button>
-                        <button className="next" ><i className="fa fa-angle-right direction-icon"></i></button>
+                <button className="prev"><i className="fa fa-angle-left direction-icon"></i></button>
+                <button className="next" ><i className="fa fa-angle-right direction-icon"></i></button>
             </div>
         </div>
     )

@@ -58,13 +58,5 @@ CREATE TABLE bid (
     ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
     
     
-INSERT INTO `User`
-VALUES ('test@tester.com', 'John', 'Doe', 'Passyyy');
-
-INSERT INTO `Category`
-VALUES ('G-Shock', 1020.00);
-
-INSERT INTO `Category`
-VALUES ('HP Spectre X360', 1040.00);
 
 

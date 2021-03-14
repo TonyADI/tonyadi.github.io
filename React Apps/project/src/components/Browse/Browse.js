@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Category } from '../Category/Category';
-import {CategoryList } from '../CategoryList/CategoryList';
+import { CategoryList } from '../CategoryList/CategoryList';
 import { ProductList } from '../ProductList/ProductList';
 import { retrieveData } from '../../utilities/projectAPI';
 import './Browse.css';
 
 export const Browse = props => {
     const [categories, setCategories] = useState('');
-    const [category, setCategory] = useState('iPhone 11');
+    const [category, setCategory] = useState('');
     const [products, setProducts] = useState('');
     
     const retrieveCategories = () => {
@@ -48,7 +47,7 @@ export const Browse = props => {
             <div>
                 <div><h2>{category}</h2></div>
                 <div className="browse-products">
-                    <ProductList products={products} account={props.account}/></div>
+                    {products && <ProductList products={products} account={props.account}/>}</div>
             </div>
         </div>
     )

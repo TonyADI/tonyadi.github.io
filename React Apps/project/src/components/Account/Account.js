@@ -176,7 +176,7 @@ export const Account = props => {
       }
 
     const handleDisplay  = e => {
-        const passwordModal = document.getElementById('password-authentication');
+        const passwordModal = document.getElementById('password-modal');
         if(e.target === passwordModal){
             setPasswordDisplay('none');
         }
@@ -243,7 +243,7 @@ export const Account = props => {
                         value={props.account} onChange={handleChange} disabled/></span>
                     </div>
                     </form>
-                    <div><button className="acc-button" onClick={modifyDetails} disabled={disabled} 
+                    <div><button className="button" onClick={modifyDetails} disabled={disabled} 
                     style={{backgroundColor: disabled ? 'grey' : '#000'}}>Save Changes</button></div>
                     <div className="edit-container" onClick={() => {setDisabled(false)}}><span><i class="fa fa-pencil"></i>Edit</span></div>
                 </div>
@@ -268,23 +268,23 @@ export const Account = props => {
                     <div>
                         <span><b>Change Password</b></span>
                         <p>Once you change your current password, you will not be able to use it again.</p>
-                        <div><button className="acc-button" onClick={handlePassword}>Change Password</button></div>
+                        <div><button className="button" onClick={handlePassword}>Change Password</button></div>
                     </div>
                     <hr></hr>
                     <div>
                         <span><b>Delete Account</b></span>
                         <p>If you delete your account, you will not be able to recover it.</p>
-                        <div onClick={handleDelete}><button className="acc-button">
+                        <div onClick={handleDelete}><button className="button">
                             Delete Account</button></div>
                     </div>
                 </div>
-                <div><button className="sign-out acc-button" onClick={signOut}>Sign Out</button></div>
+                <div><button className="sign-out button" onClick={signOut}>Sign Out</button></div>
 
 
 
                 {/*PASSWORD MODAL CONTAINER */}
 
-                <div id="password-authentication" style={{display: passwordDisplay}}>
+                <div id="password-modal" style={{display: passwordDisplay}}>
                     <div class="password-container">
                         <form onSubmit={manageAccount}>
                             <div className="input-container">

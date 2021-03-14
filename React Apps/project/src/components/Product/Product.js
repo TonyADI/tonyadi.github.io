@@ -204,7 +204,7 @@ export const Product = props => {
                             <div className="product-detail"><span>{duration}</span></div>
                             </div>
                             {(duration !=='Expired' && !props.sample)  && <div>
-                                <button onClick={placeBid} className="product-button" 
+                                <button onClick={placeBid} className="bid-button" 
                             name='Bid'>Bid</button></div>}
                     </div>
                 </div>
