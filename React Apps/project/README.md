@@ -23,4 +23,5 @@ I do not intend to make this an actual platform/website rather I am using it as 
 - Ability to send messages between the seller and the buyer of the product.
 - Archive a listing if it has no current bids, and archive a listing that has been purchased.
 - Delete expired bid records upon the users request.
-- A robust search functionality for a product list
+- A robust search functionality for a product list.
+- Improved security in server and backend.
