@@ -4,68 +4,346 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home Page</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap-4.3.1.css" rel="stylesheet">
-	<link href="css/custom.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.svg" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Emmanuel Tony-Adiari | Full Stack Developer</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand ml-5 active" href="index.html"><i>ETA<span class="sr-only">(current)</span></i></a>
-		<div class="skip"><a href="#maincontent">Skip to main content</a></div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse offset-md-8" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="html/about.html">About Me</a>
-          </li>
-		  <li class="nav-item">
-            <a class="nav-link" href="html/gallery.html">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="html/courses.html">Courses</a>
-          </li>
-		  <li class="nav-item">
-            <a class="nav-link" href="html/contact.html">Contact</a>
-          </li>
-			<li class="nav-item">
-            <a class="nav-link" href="html/blog.html">Blog</a>
-          </li>
-        </ul>
-        
-      </div>
-    </nav>
-    <section id="maincontent">
-      <div class="jumbotron-ix text-center mt-2">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h1>Welcome Welcome!</h1>
-				<h4>Come on in, don't be shy</h4>
-              <p>Where would you like to start off first?</p>
-              <a class="btn btn-outline-primary btn-lg" href="html/gallery.html" role="button">Gallery</a>
-				<a class="btn btn-outline-primary btn-lg" href="html/blog.html" role="button">Blog</a>
+      <nav>
+          <a href="index.html" class="nav-logo">
+              <img src="./images/logo.svg" alt="website logo" id="logo"/>
+          </a>
+          <a href="EmmanuelTonyAdiari - Resume.pdf" target="_blank">
+              <button class="nav-resume view-button">Resume
+                  </button>
+              </a>
+      </nav>
+      <section id="hero">
+        <div id="hero-title">
+            <h1>Hello, I'm Emmanuel. 
+                <br/>I'm a Full Stack Developer.</h1>
+        </div>
+        <div id="scroll-down"><span>Hop right in</span>
+            <div><i class="fa fa-angle-down arrow-down"></i></div>
+        </div>
+      </section>
+      <section id="about">
+          <div id="about-info">
+            <h2>Get to know</h2>
+            <p>
+                I'm a Full Stack Developer with an inclination towards front end development.
+                I have a passion for visuals but also server side coding.
+            </p>
+            <p>
+                I studied at the University of Toronto and Sheridan College from 2015 to 2020,
+                receiving a Bsc degree in Computer Science and a diploma in Digital Communications.
+            </p>
+            <p>
+                I have worked with various languages such as Python, Java, C, C++ and so on. 
+                I have also worked with CMS's such as Spotify and Wordpress.
+            </p>
+            <p>
+                I am passionate about different forms of media such as movies, books, and videogames. 
+                I am also interested in movie and video game direction, script writing and production.
+                I also follow cryptocurrencies and stocks. 
+            </p>
+          </div>
+          <h3>Skills</h3>
+          <div id="skills-container">
+            <div class="skills">
+                <div class="skills-icon-container"><i class="fa fa-code"></i>
+                </div>
+                <h4>Frontend</h4>
+                <div id="frontend-skills">
+                    <ul>
+                        <li>
+                            <div>CSS</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="css-progress">
+                                    <span>3 Years</span></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>HTML</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="html-progress">
+                                    <span>3 Years</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>Javascript</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="js-progress">
+                                    <span>2.5 Years</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>React</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="react-progress">
+                                    <span>1.5 Years</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skills-icon-container"><i class="fa fa-database"></i>
+                </div>
+                <h4>Backend</h4>
+                <div id="backend-skills">
+                    <ul>
+                        <li>
+                            <div>ExpressJS</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="express-progress">
+                                    <span>1 Year</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>MySQL</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="mysql-progress">
+                                    <span>1 Year</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>NodeJS</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="node-progress">
+                                    <span>1.5 Years</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>REST API</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="rest-progress">
+                                    <span>1.5 Years</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skills-icon-container"><i class="fa fa-user"></i>
+                </div>
+                <h4>Personal</h4>
+                <div id="personal-skills">
+                    <ul>
+                        <li>
+                            <div>Communication</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="communication"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>Autodidacticism</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="autodidacticism"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>Problem Solving</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="problem-solving"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>Time Management</div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="time-management"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <hr>
-    <footer class="text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <p>Copyright © 2018 ETA. All rights reserved.</p>
+          <a target="_blank" href="">
+              <button class="view-button">View Resume</button>
+          </a>
+      </section>
+      <section id="portfolio">
+          <h2>My Portfolio</h2>
+          <h3>Main Projects</h3>
+          <div id="main-projects">
+              <div class="main-project-container">
+                <div class="main-project-image" id="augeo">
+                    <div class="image-overlay">
+                    <div class="main-project-buttons">
+                        <a target="_blank" href="https://github.com/TonyADI/augeo">
+                            <button class="view-button">View Repo</button>
+                        </a>
+                        <a><button class="view-button">View Website</button></a>
+                    </div>
+                    </div>
+                </div>
+                <div class="stack">React, Express, NodeJS, MySQL</div>
+              </div>
+                <div class="main-project-container">
+                    <div class="main-project-image" id="ravenous">
+                    <div class="image-overlay">
+                        <div class="main-project-buttons">
+                            <a target="_blank" href="https://github.com/TonyADI/ravenous">
+                                <button class="view-button">View Repo</button>
+                            </a>
+                            <a href="apps/ravenous-app.html" target="_blank">
+                                <button class="view-button">View Website</button></a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="stack">Javascript, HTML, CSS, React, Fetch API</div>
+                </div>
+                <div class="main-project-container">
+                    <div class="main-project-image" id="jamming">
+                    <div class="image-overlay">
+                        <div class="main-project-buttons">
+                            <a target="_blank" href="https://github.com/TonyADI/jamming">
+                                <button class="view-button">View Repo</button>
+                            </a>
+                            <a href="apps/jamming-app.html" target="_blank">
+                                <button class="view-button">View Website</button></a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="stack">Javascript, HTML, CSS, React, Fetch API</div>
+                </div>
+                <div class="main-project-container">
+                    <div class="main-project-image" id="yelp">
+                    <div class="image-overlay">
+                        <div class="main-project-buttons">
+                            <a target="_blank" href="https://github.com/TonyADI/yelp-homepage-mockup">
+                                <button class="view-button">View Repo</button>
+                            </a>
+                            <a href="apps/yelp-mockup-app.html" target="_blank">
+                                <button class="view-button">View Website</button></a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="stack">Javascript, HTML, CSS, React, Fetch API</div>
+                </div>
+            </div>
+            <h3>Side Projects</h3>
+            <div id="side-projects">
+                <div class="side-project-container" id="calculator-container">
+                    <h4>Calculator</h4>
+                    <div class="image-container">
+                        <img class="side-project-image" alt="calculator"
+                         src="./images/iconmonstr-calculator-2.svg"/>
+                        <div id="calculator-overlay"></div>
+                    </div>
+                    <div class="side-project-buttons">
+                        <a target="_blank" href="https://github.com/TonyADI/calculator-app">
+                            <button class="view-button">View Repo</button>
+                        </a>
+                        <a href="apps/calculator-app.html" target="_blank">
+                            <button class="view-button">View App</button></a>
+                    </div>
+                </div>
+                <div class="side-project-container" id="todo-container">
+                    <h4>Todo List</h4>
+                    <div id="no-overflow"><img class="side-project-image" 
+                        src="images/iconmonstr-menu-2.svg" alt="todo list"/>
+                    </div>
+                    <div class="side-project-buttons">
+                        <a target="_blank" href="https://github.com/TonyADI/todo-list">
+                            <button class="view-button">View Repo</button>
+                        </a>
+                        <a href="apps/todo-list-app.html" target="_blank">
+                            <button class="view-button">View App</button></a>
+                    </div>
+                </div>
+                <div class="side-project-container" id="rps-container">
+                    <h4>Rock Paper Scissors</h4>
+                    <!--<i class="fa fa-hand-stop-o"></i> -->
+                    <i class="fa fa-hand-grab-o" id="rps-icon"></i>
+                    <!-- <i class="fa fa-hand-scissors-o"></i> -->
+                    <div class="side-project-buttons">
+                        <a target="_blank" href="https://github.com/TonyADI/rock-paper-scissors">
+                            <button class="view-button">View Repo</button>
+                        </a>
+                        <a href="apps/rockpaperscissors-app.html" target="_blank">
+                            <button class="view-button">View App</button></a>
+                    </div>
+                </div>
+                <div class="side-project-container" id="weather-container">
+                    <h4>Weather</h4>
+                    <img class="side-project-image" src="images/iconmonstr-weather-2.svg"
+                    alt="sun"/>
+                    <div class="side-project-buttons">
+                        <a target="_blank" href="https://github.com/TonyADI/weather-app">
+                            <button class="view-button">View Repo</button>
+                        </a>
+                        <a href="apps/weather-app.html" target="_blank">
+                            <button class="view-button">View App</button></a>
+                    </div>
+                </div>
+                <div class="side-project-container" id="tictactoe-container">
+                    <h4>Tic Tac Toe</h4>
+                    <div class="image-container">
+                        <img class="side-project-image" src="images/tic-tac-toe_39453.png"
+                        alt="tic tac toe board" />
+                        <div id="tictactoe-overlay"></div>
+                    </div>
+                    <div class="side-project-buttons">
+                        <a target="_blank" href="https://github.com/TonyADI/tic-tac-toe">
+                            <button class="view-button">View Repo</button>
+                        </a>
+                        <a href="apps/tictactoe-app.html" target="_blank">
+                            <button class="view-button">View App</button></a>
+                    </div>
+                </div>
+                <div class="side-project-container" id="twitter-container">
+                    <h4>Twitter Bot</h4>
+                    <img class="side-project-image" src="images/iconmonstr-twitter-1.svg"
+                    alt="twitter logo"/>
+                    <div class="side-project-buttons">
+                        <a target="_blank" href="https://github.com/TonyADI/no-idea-yet">
+                            <button class="view-button">View Repo</button>
+                        </a>
+                        <a><button class="view-button" disabled>In Development</button></a>
+                    </div>
+                </div>
+            </div>
+            <a target="_blank" href="https://github.com/TonyADI?tab=repositories">
+                <button class="view-button" id="view-more" >View More
+                </button>
+            </a>
+        </section>
+      <section id="contact-me">
+          <div id="contact-info">
+            <h2>Like what you see? Then let's talk!</h2>
+            <p>I'm always open to working on various projects and opportunities.
+                If you just want to chat thats fine too.
+            </p>
           </div>
-        </div>
-      </div>
-    </footer>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap-4.3.1.js"></script>
+          <div id="contacts-container">
+            <a href="mailto:emmanueladiari@hotmail.com" class="contact"
+             target="_blank">
+                <div>
+                    <img src="images/email-icon.svg" alt="email-icon"/>
+                </div>
+            </a>
+            <a href="https://github.com/tonyadi" class="contact"
+             target="_blank">
+                <div>
+                    <img src="images/github-icon.svg" alt="github icon"/>
+                </div>
+            </a>
+            <a href="" class="contact" target="_blank">
+                <div>
+                    <img src="images/linkedin-icon.svg" alt="linkedin icon"/>
+                </div>
+            </a>
+          </div>
+        </section>
+    <script src="js/main.js"></script>
   </body>
 </html>
