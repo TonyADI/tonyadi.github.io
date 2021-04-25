@@ -190,6 +190,11 @@ section h2{
     to {width: 100%;}
 }
 
+#portfolio a{
+    text-decoration: none;
+    color: rgb(58, 106, 228);
+    font-weight: 550;
+}
 
 #main-projects{
     display: flex;
@@ -230,24 +235,9 @@ section h2{
     position: relative;
 }
 
-.main-project-image .image-overlay{
-    position: absolute;
-    top: 0;
-    left:0;
-    background-color: rgba(0, 0, 0, 0);
-    height: inherit;
-    width: 100%;
-    transition: background-color 0.5s, transform 0.5s;
-}
-
 
 .main-project-container:hover .main-project-image{
     transform: scale(1.015, 1.015);
-}
-
-.main-project-container:hover .image-overlay{
-    background-color: rgba(0, 0, 0, 0.062);
-    transform: scale(1.01, 1.01);
 }
 
 #augeo{
@@ -270,9 +260,11 @@ section h2{
     padding: 0px;
 }
 
-.main-project-image:hover + .stack{
-    transform: translateY(7.5px);
-    opacity: 1;
+@media only screen and (min-width: 769px){
+    .main-project-image:hover + .stack{
+        transform: translateY(7.5px);
+        opacity: 1;
+    }
 }
 
 .stack{
@@ -581,7 +573,6 @@ nav {
     }
 
     #about-info{
-        text-align: left;
         margin: auto 50px;
     }
 
@@ -598,19 +589,43 @@ nav {
     .view-button{
         opacity: 1;
     }
+    .stack{
+        transition: none;
+        opacity: 1;
+        margin: 10px;
+        transform: none;
+        font-size: 13px;
+        color: #050f19be;
+    }
+    #view-more{
+        color: rgb(57, 106, 230);
+        background-color: #fff;
+    
+    }
+    
+    #view-more:hover{
+        color: #fff;
+        background-color: rgb(57, 106, 230);
+    }
 }
 
 @media only screen and (max-width: 450px){
-    #about-info p, #contact-info p{
+    #about-info p, #contact-info p, #portfolio p{
         font-size: 13px;
         line-height: 1.5;
         color: #050f19be;
     }
+    #about-info p{
+        text-align: left;
+    }
     #scroll-down{
         bottom: 30px;
     }
-    section#hero{
+    section#hero, section#contact-me{
         min-height: 70vh;
+    }
+    #portfolio p, #about-info{
+        margin: auto 25px;
     }
     #skills-container{
         display: block;
