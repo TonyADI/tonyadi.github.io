@@ -7,6 +7,11 @@ body {
     color: #050F19;
 }
 
+p{
+    color: #050f19be;
+    line-height: 1.5;
+}
+
 section{
     min-height: 100vh;
 }
@@ -435,7 +440,7 @@ section h2{
     outline: none;
 }
 
-.view-button:hover{
+.view-button:hover:not(#in-development){
     cursor: pointer;
     color: rgb(57, 106, 230);
     background-color: #fff;
@@ -489,6 +494,7 @@ section h2{
     95%{transform: translateY(-2px);}
     100%{transform: translateY(0px); opacity: 1;}
 }
+
 
 #contact-info{
     opacity: 0;
@@ -607,13 +613,14 @@ nav {
         color: #fff;
         background-color: rgb(57, 106, 230);
     }
+    #in-development{
+        opacity: 0.7;
+    }
 }
 
 @media only screen and (max-width: 450px){
     #about-info p, #contact-info p, #portfolio p{
         font-size: 13px;
-        line-height: 1.5;
-        color: #050f19be;
     }
     #about-info p{
         text-align: left;
@@ -647,10 +654,19 @@ nav {
         margin: auto 15px;
         max-width: none;
     }
+    #contact-info p{
+        margin: auto 25px;
+    }
     .contact{
         margin: 30px auto;
     }
     #hero-title h1{
         font-size: 1.25em;
+    }
+    #main-projects{
+        margin-bottom: 40px;
+    }
+    .view-button{
+        margin: auto 20px;
     }
 }
