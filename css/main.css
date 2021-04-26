@@ -266,13 +266,6 @@ section h2{
     padding: 0px;
 }
 
-@media only screen and (min-width: 769px){
-    .main-project-image:hover + .stack{
-        transform: translateY(7.5px);
-        opacity: 1;
-    }
-}
-
 .stack{
     transition: opacity 0.5s ease, transform 0.5s ease;
     opacity: 0;
@@ -572,13 +565,27 @@ footer{
     margin: 30px auto;
 }
 
+@media only screen and (min-width: 769px){
+    .main-project-image:hover + .stack{
+        transform: translateY(7.5px);
+        opacity: 1;
+    }
+    #about-info p{
+        display: inline;
+        margin: 0;
+    }
+}
+
 @media only screen and (max-width: 768px){
     .main-project-container{
         width: 100%;
         margin: 20px 25px 40px;
         min-height: 40vw;
     }
-
+    .main-project-container:first-child, 
+    .side-project-container:first-child{
+        margin-top: 0px;
+    }
     .side-project-container{
         width: 35%;
     }
@@ -590,7 +597,9 @@ footer{
     #skills-container{
         margin: auto 50px;
     }
-
+    #contact-info{
+        padding-top: 30%;
+    }
     #contact-info p{
         margin: auto 50px;
     }
@@ -613,7 +622,6 @@ footer{
         background-color: #fff;
     
     }
-    
     #view-more:hover{
         color: #fff;
         background-color: rgb(57, 106, 230);
@@ -634,14 +642,17 @@ footer{
     .main-project-buttons{
         bottom: 20%;
     }
+    #about-info p{
+        text-align: left;
+    }
+    #portfolio-info{
+        margin-bottom: 40px;
+    }
 }
 
 @media only screen and (max-width: 450px){
     #about-info p, #contact-info p, #portfolio p{
         font-size: 13px;
-    }
-    #about-info p{
-        text-align: left;
     }
     #scroll-down{
         bottom: 30px;
@@ -659,6 +670,9 @@ footer{
     .skills{
         width: 100%;
         margin: 40px auto;
+    }
+    .skills:first-child{
+        margin-top: 20px;
     }
     .side-project-container{
         width: 100%;
