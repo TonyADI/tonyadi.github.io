@@ -262,10 +262,6 @@ section h2{
     background-image: url('../images/yelp.png');
 }
 
-#augeo:hover{
-    padding: 0px;
-}
-
 .stack{
     transition: opacity 0.5s ease, transform 0.5s ease;
     opacity: 0;
@@ -629,10 +625,10 @@ footer{
     #in-development{
         opacity: 0.7;
     }
-    .main-project-image .main-project-buttons{
+    .main-project-container .main-project-buttons{
         display: none;
     }
-    .main-project-image:active .main-project-buttons {
+    .main-project-container:hover .main-project-buttons {
         display: block;
     }
     .main-project-image:hover{
