@@ -628,11 +628,9 @@ footer{
     .main-project-container .main-project-buttons{
         display: none;
     }
-    .main-project-container:hover .main-project-buttons {
+    .main-project-container:hover .main-project-buttons, 
+    .main-project-container:active .main-project-buttons {
         display: block;
-    }
-    .main-project-image:hover{
-        background-color: #ccc;
     }
     .main-project-buttons{
         bottom: 20%;
