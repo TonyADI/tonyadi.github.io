@@ -7,7 +7,7 @@ body {
     color: #050F19;
 }
 
-p{
+p, footer span{
     color: #050f19be;
     line-height: 1.5;
 }
@@ -231,6 +231,7 @@ section h2{
 }
 
 .main-project-image{
+    background-color: #555;
     background-size: cover;
     padding: 0px;
     transition: padding 0.3s;
@@ -419,7 +420,6 @@ section h2{
 }
 
 .view-button{
-    border: 0px;
     padding: 10px 20px;
     border-radius: 40px;
     opacity: 0;
@@ -567,10 +567,15 @@ nav {
     font-size: 17.5px;
 }
 
+footer{
+    font-size: 12px;
+    margin: 30px auto;
+}
+
 @media only screen and (max-width: 768px){
     .main-project-container{
         width: 100%;
-        margin: 20px 25px;
+        margin: 20px 25px 40px;
         min-height: 40vw;
     }
 
@@ -615,6 +620,19 @@ nav {
     }
     #in-development{
         opacity: 0.7;
+    }
+    .main-project-image .main-project-buttons{
+        display: none;
+    }
+    .main-project-image:hover .main-project-buttons, 
+    .main-project-image:focus .main-project-buttons {
+        display: block;
+    }
+    .main-project-image:hover{
+        background-color: #ccc;
+    }
+    .main-project-buttons{
+        bottom: 20%;
     }
 }
 
@@ -666,7 +684,7 @@ nav {
     #main-projects{
         margin-bottom: 40px;
     }
-    .view-button{
-        margin: auto 20px;
+    #portfolio .view-button{
+        margin: auto 15px;
     }
 }
