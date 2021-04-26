@@ -632,8 +632,7 @@ footer{
     .main-project-image .main-project-buttons{
         display: none;
     }
-    .main-project-image:hover .main-project-buttons, 
-    .main-project-image:focus .main-project-buttons {
+    .main-project-image:active .main-project-buttons {
         display: block;
     }
     .main-project-image:hover{
