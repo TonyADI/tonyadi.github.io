@@ -625,15 +625,15 @@ footer{
     #in-development{
         opacity: 0.7;
     }
-    .main-project-container .main-project-buttons{
-        display: none;
-    }
-    .main-project-container:hover .main-project-buttons, 
-    .main-project-container:active .main-project-buttons {
-        display: block;
-    }
     .main-project-buttons{
         bottom: 20%;
+        opacity: 0;
+        transition: opacity 0.5s;
+        padding: 50px 5px 5px;
+    }
+    .main-project-container:hover .main-project-buttons, 
+    .main-project-container:active .main-project-buttons{
+        opacity: 1;
     }
     #about-info p{
         text-align: left;
