@@ -367,6 +367,14 @@ section h2{
     width: 75px;
 }
 
+#shopify-container .side-project-image{
+    transition: transform 1s;
+}
+
+#shopify-container:hover .side-project-image{
+    transform: rotateY(360deg);
+}
+
 @keyframes rps{
     0% {transform: rotate(0);}
     50% {transform: rotate(90deg);}
