@@ -77,10 +77,6 @@ section h2{
     box-shadow: 1px 1px 5px #ddd;
 }
 
-.skills-icon-container{
-
-}
-
 .skills i{
     font-size: 25px;
 }
@@ -121,10 +117,10 @@ section h2{
     margin-right: auto;
     width: max-content;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.3s;
 }
 
-.progress-bar-container:hover .progress-bar span{
+.skills:hover .progress-bar span{
     opacity: 1;
 }
 
@@ -139,7 +135,7 @@ section h2{
 }
 
 .progress-fill{
-    animation: progress-fill 1s ease 0.25s forwards; /* THIS */
+    animation: progress-fill 1s ease 0.25s forwards;
 }
 
 #css-progress{
@@ -318,16 +314,6 @@ section h2{
     background-color: rgba(155, 155, 155, 0.4);
     opacity: 0;
 }
-
-/*
-    transform: translateY(30px) rotateX(180deg);
-    transform: translate(30px, 30px) rotate(180deg);
-    transform: translateX(30px) rotateY(180deg);
-
-    transform: scale(0.25, 0.25) rotate(-360deg); // spins
-    transform: rotate(-30deg) translate(200px, 20px) scale(0.25, 0.25); // flies
-
-*/
 
 #calculator-container:hover #calculator-overlay{
     animation: calculator-click 1s infinite;
