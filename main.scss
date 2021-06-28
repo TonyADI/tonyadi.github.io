@@ -1,14 +1,16 @@
+$body-color: #050f19be;
+
 body {
+    color: #050f19;
     font-family: "Open Sans",sans-serif;
-    text-align: center;
-    position: relative;
     max-width: 1200px;
     margin: auto;
-    color: #050F19;
+    position: relative;
+    text-align: center;
 }
 
 p, footer span{
-    color: #050f19be;
+    color: $body-color;
     line-height: 1.5;
 }
 
@@ -26,11 +28,11 @@ section h2{
 }
 
 #hero-title{
-    margin-top: 50px;
-    padding-top: 15%;
-    font-size: 2em;
-    opacity: 0;
     animation: drop-in 1s ease 0.25s forwards;
+    font-size: 2em;
+    margin-top: 50px;
+    opacity: 0;
+    padding-top: 15%;
 }
 
 .arrow-down{
@@ -418,11 +420,6 @@ section h2{
     margin: auto 15px;
 }
 
-
-.view-button:focus{
-    outline: none;
-}
-
 .view-button:hover:not(#in-development){
     cursor: pointer;
     color: rgb(57, 106, 230);
@@ -605,7 +602,7 @@ footer{
         margin: 10px;
         transform: none;
         font-size: 13px;
-        color: #050f19be;
+        color: $body-color;
     }
     #view-more{
         color: rgb(57, 106, 230);
