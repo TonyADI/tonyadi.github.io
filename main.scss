@@ -1,23 +1,24 @@
+$body-color: #050f19be;
+
 body {
+    color: #050f19;
     font-family: "Open Sans",sans-serif;
-    text-align: center;
-    position: relative;
     max-width: 1200px;
     margin: auto;
-    color: #050F19;
+    position: relative;
+    text-align: center;
 }
 
 p, footer span{
-    color: #050f19be;
+    color: $body-color;
     line-height: 1.5;
 }
 
 section{
     min-height: 100vh;
-}
-
-section h2{
-    font-size: 1.85em;
+    h2{
+        font-size: 1.85em;
+    }
 }
 
 #hero{
@@ -26,11 +27,11 @@ section h2{
 }
 
 #hero-title{
-    margin-top: 50px;
-    padding-top: 15%;
-    font-size: 2em;
-    opacity: 0;
     animation: drop-in 1s ease 0.25s forwards;
+    font-size: 2em;
+    margin-top: 50px;
+    opacity: 0;
+    padding-top: 15%;
 }
 
 .arrow-down{
@@ -40,15 +41,15 @@ section h2{
 }
   
 #scroll-down{
-    position: absolute;
-    width: 100px;
+    animation: fade-in 1s ease 1.25s forwards;
     bottom: 110px;
     left: 0; 
-    right: 0; 
     margin-left: auto; 
     margin-right: auto;
     opacity: 0;
-    animation: fade-in 1s ease 1.25s forwards;
+    position: absolute;
+    right: 0; 
+    width: 100px;
 }
 
 .fade-out{
@@ -71,24 +72,21 @@ section h2{
 .skills{
     border: 0.5px solid #ccc;
     border-radius: 10px;
+    box-shadow: 1px 1px 5px #ddd;
+    margin: 0px auto;
     padding: 20px 0px;
     width: 30%;
-    margin: 0px auto;
-    box-shadow: 1px 1px 5px #ddd;
-}
-
-.skills i{
-    font-size: 25px;
-}
-
-.skills li{
-    font-size: 14px;
-    margin: 15px 0px;
-}
-
-.skills ul{
-    list-style-type: none;
-    padding: 0px;
+    i{
+        font-size: 25px;
+    }
+    li{
+        font-size: 14px;
+        margin: 15px 0px;
+    }
+    ul{
+        list-style-type: none;
+        padding: 0px;
+    }
 }
 
 #frontend-skills, #backend-skills, #personal-skills{
@@ -106,20 +104,6 @@ section h2{
     margin-top: 5px;
 }
 
-.progress-bar span{
-    color: #fff;
-    font-size: 7.5px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0.5px;
-    margin-left: auto;
-    margin-right: auto;
-    width: max-content;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
 .skills:hover .progress-bar span{
     opacity: 1;
 }
@@ -132,6 +116,21 @@ section h2{
     padding: inherit;
     border-radius: 2.5px 0px 0px 2.5px;
     width: 0px;
+    span{
+        color: #fff;
+        font-size: 7.5px;
+        /* inherit? */
+        position: absolute;
+        left: 0;
+        /* */
+        right: 0;
+        bottom: 0.5px;
+        margin-left: auto;
+        margin-right: auto;
+        width: max-content;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
 }
 
 .progress-fill{
@@ -600,7 +599,7 @@ footer{
         margin: 10px;
         transform: none;
         font-size: 13px;
-        color: #050f19be;
+        color: $body-color;
     }
     #view-more{
         color: rgb(57, 106, 230);
