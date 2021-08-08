@@ -258,6 +258,10 @@ section h2{
     background-image: url('../images/yelp.png');
 }
 
+#transit-hub {
+    background-image: url('../images/transit-hub.png');
+}
+
 .stack{
     transition: opacity 0.5s ease, transform 0.5s ease;
     opacity: 0;
