@@ -357,11 +357,13 @@ section h2{
     width: 75px;
 }
 
-#shopify-container .side-project-image{
+#shopify-container .side-project-image,
+#shopify-winter-container .side-project-image {
     transition: transform 1s;
 }
 
-#shopify-container:hover .side-project-image{
+#shopify-container:hover .side-project-image,
+#shopify-winter-container:hover .side-project-image{
     transform: rotateY(360deg);
 }
 
