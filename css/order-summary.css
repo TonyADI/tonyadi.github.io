@@ -1,0 +1,164 @@
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+#second-img {
+    transform: rotate(180deg) translateY(42%);
+    opacity: 0.75;
+}
+
+#body-conatiner {
+    position: relative;
+}
+
+#body-container > img {
+    width: 100%;
+}
+
+.mobile-bg {
+    display: none;
+}
+
+.card-container {
+    animation: fade-down 0.75s forwards;
+    box-shadow: 0px 25px 35px -35px hsla(224, 23%, 55%, 0.644);
+    border-radius: 20px;
+    height: 80%;
+    overflow: hidden;
+    position: absolute;
+    opacity: 0; 
+    transform: translateY(-60%) translateX(-50%);
+    top: 50%;
+    left: 50%;
+    width: 25%;
+}
+.card-container > img {
+    width: 100%;
+}
+#order-summary {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    transform: translateY(-5px);
+}
+
+#order-summary p {
+    margin: auto;
+    padding: 15px;
+    font-size: 0.9em;
+    width: 90%;
+    color: rgb(158, 158, 158);
+}
+
+#order-summary h1 {
+    color: hsl(223, 47%, 23%);
+    font-size: 1.55em;
+    font-weight: 900;
+    margin: 0;
+}
+
+#order-summary > button {
+    border: 0;
+    border-radius: 10px;
+    background-color: hsl(245, 75%, 52%);
+    box-shadow: 0px 22.5px 10px 4px  hsla(224, 23%, 55%, 0.135);
+    color: #fff;
+    font-weight: 700;
+    margin: 30px 0px 20px 0px;
+    padding: 12.5px 0px;
+    transition: background-color 0.5s;
+    width: 100%;
+}
+
+#order-summary > button:hover {
+    background-color: rgb(83, 83, 240);
+}
+
+.order-plan {
+    border: 0;
+    border-radius: 10px;
+    background-color: rgba(236, 237, 240, 0.349);
+    display: flex;
+    flex-direction: row;
+    padding: 15px 20px;
+}
+
+.order-plan > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.order-plan > span {
+    color: hsl(245, 75%, 52%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 0.75em;
+    text-decoration: underline;
+    transition: all 0.5s;
+}
+
+.order-plan > span, #cancel-order,
+#order-summary > button {
+    cursor: pointer;
+}
+
+.order-plan > span:hover {
+    color: rgb(107, 107, 238);
+    text-decoration: none;
+}
+
+#cancel-order {
+    color: gray;
+    font-weight: 700;
+    font-size: 13px;
+    transition: color 0.5s;
+}
+
+#cancel-order:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+#plan-price {
+    color: grey;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+#plan-type {
+    color: hsl(223, 47%, 23%);
+    font-size: 0.9em;
+    font-weight: 900;
+}
+
+@media only screen and (max-width: 420px) {
+    .card-container {
+        height: 67.5%;
+        width: 90%;
+    }
+
+    #body-container > img {
+        height: 65vh;
+    }
+
+    .desktop-bg {
+        display: none;
+    }
+
+    .mobile-bg {
+        display: initial;
+    }
+}
+  
+@keyframes fade-down {
+    from {opacity: 0; transform: translateY(-60%) translateX(-50%);}
+    to {opacity: 1; transform: translateY(-50%) translateX(-50%);}
+  }
