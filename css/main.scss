@@ -1,24 +1,55 @@
-$body-color: #050f19be;
-
 body {
-    color: #050f19;
     font-family: "Open Sans",sans-serif;
+    text-align: center;
+    position: relative;
     max-width: 1200px;
     margin: auto;
-    position: relative;
-    text-align: center;
+    color: #050F19;
+}
+
+#frontend-mentor-challenges {
+    column-gap: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .frontend-mentor-challenge {
+        border: 0;
+        border-radius: 10px;
+        background-size: 100% 100%;
+        height: 225px;
+        margin: 20px auto;
+        overflow: hidden;
+        position: relative;
+        width: 370px;
+    }
+    .frontend-mentor-challenge:hover button {
+        opacity: 1;
+    }
+    #order-summary {
+        background-image: url('../images/desktop-design.jpg');
+    }
+    #sunnyside-landing {
+        background-image: url('../images/sunnyside-landing/desktop-preview.jpg');
+    }
+    #time-tracking-dashboard {
+        background-image: url('../images/time-tracking-dashboard/desktop-design.jpg');
+    }
+    #ip-address-tracker {
+        background-image: url('../images/ip-tracking-dashboard/desktop-design.jpg');
+    }
 }
 
 p, footer span{
-    color: $body-color;
+    color: #050f19be;
     line-height: 1.5;
 }
 
 section{
     min-height: 100vh;
-    h2{
-        font-size: 1.85em;
-    }
+}
+
+section h2{
+    font-size: 1.85em;
 }
 
 #hero{
@@ -27,11 +58,11 @@ section{
 }
 
 #hero-title{
-    animation: drop-in 1s ease 0.25s forwards;
-    font-size: 2em;
     margin-top: 50px;
-    opacity: 0;
     padding-top: 15%;
+    font-size: 2em;
+    opacity: 0;
+    animation: drop-in 1s ease 0.25s forwards;
 }
 
 .arrow-down{
@@ -41,15 +72,15 @@ section{
 }
   
 #scroll-down{
-    animation: fade-in 1s ease 1.25s forwards;
+    position: absolute;
+    width: 100px;
     bottom: 110px;
     left: 0; 
+    right: 0; 
     margin-left: auto; 
     margin-right: auto;
     opacity: 0;
-    position: absolute;
-    right: 0; 
-    width: 100px;
+    animation: fade-in 1s ease 1.25s forwards;
 }
 
 .fade-out{
@@ -72,21 +103,24 @@ section{
 .skills{
     border: 0.5px solid #ccc;
     border-radius: 10px;
-    box-shadow: 1px 1px 5px #ddd;
-    margin: 0px auto;
     padding: 20px 0px;
     width: 30%;
-    i{
-        font-size: 25px;
-    }
-    li{
-        font-size: 14px;
-        margin: 15px 0px;
-    }
-    ul{
-        list-style-type: none;
-        padding: 0px;
-    }
+    margin: 0px auto;
+    box-shadow: 1px 1px 5px #ddd;
+}
+
+.skills i{
+    font-size: 25px;
+}
+
+.skills li{
+    font-size: 14px;
+    margin: 15px 0px;
+}
+
+.skills ul{
+    list-style-type: none;
+    padding: 0px;
 }
 
 #frontend-skills, #backend-skills, #personal-skills{
@@ -104,6 +138,20 @@ section{
     margin-top: 5px;
 }
 
+.progress-bar span{
+    color: #fff;
+    font-size: 7.5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
 .skills:hover .progress-bar span{
     opacity: 1;
 }
@@ -116,21 +164,6 @@ section{
     padding: inherit;
     border-radius: 2.5px 0px 0px 2.5px;
     width: 0px;
-    span{
-        color: #fff;
-        font-size: 7.5px;
-        /* inherit? */
-        position: absolute;
-        left: 0;
-        /* */
-        right: 0;
-        bottom: 0.5px;
-        margin-left: auto;
-        margin-right: auto;
-        width: max-content;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
 }
 
 .progress-fill{
@@ -257,6 +290,10 @@ section{
     background-image: url('../images/yelp.png');
 }
 
+#transit-hub {
+    background-image: url('../images/transit-hub.png');
+}
+
 .stack{
     transition: opacity 0.5s ease, transform 0.5s ease;
     opacity: 0;
@@ -352,11 +389,13 @@ section{
     width: 75px;
 }
 
-#shopify-container .side-project-image{
+#shopify-container .side-project-image,
+#shopify-winter-container .side-project-image {
     transition: transform 1s;
 }
 
-#shopify-container:hover .side-project-image{
+#shopify-container:hover .side-project-image,
+#shopify-winter-container:hover .side-project-image{
     transform: rotateY(360deg);
 }
 
@@ -599,7 +638,7 @@ footer{
         margin: 10px;
         transform: none;
         font-size: 13px;
-        color: $body-color;
+        color: #050f19be;
     }
     #view-more{
         color: rgb(57, 106, 230);
