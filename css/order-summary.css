@@ -1,7 +1,6 @@
 body {
+    background-color: hsl(224deg 100% 92%);
     font-family: 'Red Hat Display', sans-serif;
-    height: 100vh;
-    overflow: hidden;
     margin: 0;
 }
 
@@ -26,6 +25,8 @@ body {
     animation: fade-down 0.75s forwards;
     box-shadow: 0px 25px 35px -35px hsla(224, 23%, 55%, 0.644);
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
     height: 80%;
     overflow: hidden;
     position: absolute;
@@ -42,7 +43,6 @@ body {
     background-color: #fff;
     padding: 40px;
     text-align: center;
-    transform: translateY(-5px);
 }
 
 #order-summary p {
@@ -141,7 +141,7 @@ body {
 
 @media only screen and (max-width: 420px) {
     .card-container {
-        height: 67.5%;
+        height: auto;
         width: 90%;
     }
 
