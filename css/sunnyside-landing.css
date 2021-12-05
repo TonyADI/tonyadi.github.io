@@ -299,6 +299,7 @@ footer > img {
     flex-direction: column;
   }
   .brand-mission-container .mission-img {
+    height: 300px;
     order: 1;
     width: auto;
   }
