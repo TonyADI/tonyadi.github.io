@@ -145,10 +145,6 @@ body {
         width: 90%;
     }
 
-    #body-container > img {
-        height: 65vh;
-    }
-
     .desktop-bg {
         display: none;
     }
