@@ -23,7 +23,7 @@ body {
   font-size: 70px;
   margin: 0 0 30px;
   text-transform: uppercase;
-  transform: translateY(-80px);
+  transform: translateY(-100px);
 }
 #hero #hero-heading-container img {
   animation: fade-in 0.95s 0.85s forwards;
@@ -349,7 +349,7 @@ footer > img {
 }
 @keyframes drop-down {
   from {
-    transform: translateY(-80px);
+    transform: translateY(-100px);
   }
   to {
     transform: translateY(0);
