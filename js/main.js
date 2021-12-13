@@ -16,36 +16,45 @@ const mainProjectsOffset = mainProjects.offsetTop;
 const sideProjects = document.getElementById('side-projects');
 const sideProjectsOffset = sideProjects.offsetTop;
 
+const progressBarsLength = progressBars.length;
+const innerHeight = window.innerHeight;
+
 // Activate animations when in view
 const addAnimation = () => {
-    if(window.pageYOffset > (skillsContainerOffset - window.innerHeight + 100)){
-        skillsContainer.classList.add('drop-in');
-        // Start progress bar animation
-        for(let i =0; i < progressBars.length; i++){
-            progressBars[i].classList.add('progress-fill')
+    if(window.scrollY > (skillsContainerOffset - innerHeight + 100) && 
+    window.scrollY < (skillsContainerOffset + innerHeight - 400)){
+        if(!skillsContainer.classList.contains('drop-in')){
+            skillsContainer.classList.add('drop-in');
+        }
+        if(!progressBars[0].classList.contains('progress-fill')){
+            // Start progress bar animation
+            for(let i =0; i < progressBarsLength; i++){
+                progressBars[i].classList.add('progress-fill')
+            }
         }
         // Hide scroll down element
         scrollDown.classList.add('fade-out');
     }
     else{
         scrollDown.classList.remove('fade-out');
-        for(let i =0; i < progressBars.length; i++){
-            progressBars[i].classList.remove('progress-fill')
+        if(progressBars[0].classList.contains('progress-fill')){
+            for(let i =0; i < progressBarsLength; i++){
+                progressBars[i].classList.remove('progress-fill')
+            }
         }
     }
-    
-    if(window.pageYOffset > (contactInfoOffset - window.innerHeight + 100)){
-        contactInfo.classList.add('drop-in');
-        contactsContainer.classList.add('bounce');
+    if(window.scrollY > (sideProjectsOffset - window.innerHeight + 100)){
+        if(!sideProjects.classList.contains('scale-up')){
+            sideProjects.classList.add('scale-up');
+        }
+    }
+    if(window.scrollY > (contactInfoOffset - window.innerHeight + 100)){
+        if(!contactInfo.classList.contains('drop-in') && !contactsContainer.classList.contains('bounce')){
+            contactInfo.classList.add('drop-in');
+            contactsContainer.classList.add('bounce');
+        }
     }
 
-    if(window.pageYOffset > (mainProjectsOffset - window.innerHeight + 100)){
-        mainProjects.classList.add('drop-in');
-    }
-
-    if(window.pageYOffset > (sideProjectsOffset - window.innerHeight + 100)){
-        sideProjects.classList.add('scale-up');
-    }
 }
 
 
