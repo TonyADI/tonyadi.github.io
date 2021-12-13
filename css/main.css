@@ -12,6 +12,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 #frontend-mentor-challenges .frontend-mentor-challenge {
   border: 0;
@@ -49,7 +50,7 @@ section {
 }
 
 section h2 {
-  font-size: 1.85em;
+  font-size: 2.5em;
 }
 
 #hero {
@@ -235,7 +236,7 @@ section h2 {
 #main-projects {
   display: flex;
   flex-wrap: wrap;
-  opacity: 0;
+  opacity: 1;
 }
 
 #side-projects {
@@ -267,10 +268,9 @@ section h2 {
 }
 
 .main-project-image {
-  background-color: #555;
+  background-color: #eee;
   background-size: cover;
   padding: 0px;
-  transition: padding 0.3s;
   height: 100%;
   transition: transform 0.5s;
   min-width: auto;
