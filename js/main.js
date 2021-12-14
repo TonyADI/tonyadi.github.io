@@ -21,8 +21,7 @@ const innerHeight = window.innerHeight;
 
 // Activate animations when in view
 const addAnimation = () => {
-    if(window.scrollY > (skillsContainerOffset - innerHeight + 100) && 
-    window.scrollY < (skillsContainerOffset + innerHeight - 400)){
+    if(window.scrollY > (skillsContainerOffset - innerHeight + 100)){
         if(!skillsContainer.classList.contains('drop-in')){
             skillsContainer.classList.add('drop-in');
         }
