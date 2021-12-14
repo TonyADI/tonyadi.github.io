@@ -698,6 +698,15 @@ footer{
         width: 100%;
         margin: 20px 25px;
     }
+    #frontend-mentor-challenges{
+        > div {
+            width: 100%;
+            .frontend-mentor-challenge {
+                margin: 20px 25px;
+                width: auto;
+            }
+        }
+    }
     #contact-info h2{
         margin: 0.8em 30px;
         font-size: 1.5em;
