@@ -224,7 +224,7 @@ section h2{
     to {width: 100%;}
 }
 
-#portfolio a{
+#portfolio-info a{
     text-decoration: none;
     color: rgb(58, 106, 228);
     font-weight: 550;
@@ -434,6 +434,11 @@ section h2{
 
 .side-project-buttons{
     margin: 10px auto;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 10px;
 }
 
 .main-project-buttons a, .side-project-buttons a{
@@ -441,15 +446,19 @@ section h2{
 }
 
 .view-button{
-    padding: 10px 20px;
     border-radius: 40px;
-    opacity: 0;
-    min-width: 108px;
-    position: relative;
-    background-color: rgb(57, 106, 230);
-    border: 1.5px solid rgb(57, 106, 230);
-    transition: opacity 0.3s, color 0.3s, background-color 0.3s;
+    width: 40%;
+    background-color: #396ae6;
+    border: 1.5px solid #396ae6;
     color: #fff;
+    font-size: 13px;
+    opacity: 0;
+    margin: auto 10px;
+    min-width: 108px;
+    padding: 10px 20px;
+    position: relative;
+    transition: opacity 0.3s, color 0.3s, background-color 0.3s;
+    box-sizing: border-box;
 }
 
 .main-project-buttons a{
@@ -465,6 +474,7 @@ section h2{
 #view-more{
     opacity: 1;
     margin: 40px auto;
+    text-decoration: none;
 }
 
 #view-overlay{
@@ -530,7 +540,8 @@ section h2{
     transform: translateY(-20px);
 }
 
-.main-project-container:hover .view-button, .side-project-container:hover .view-button{
+.main-project-container:hover .view-button, .side-project-container:hover .view-button,
+.frontend-mentor-challenge:hover .view-button{
     opacity:1;
 }
 
@@ -588,6 +599,12 @@ footer{
     margin: 30px auto;
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1200px){
+    body {
+        margin: auto 50px;
+    }
+}
+
 @media only screen and (min-width: 769px){
     .main-project-image:hover + .stack{
         transform: translateY(7.5px);
@@ -604,10 +621,6 @@ footer{
         width: 100%;
         margin: 20px 25px 40px;
         min-height: 40vw;
-    }
-    .main-project-container:first-child, 
-    .side-project-container:first-child{
-        margin-top: 0px;
     }
     .side-project-container{
         width: 35%;
@@ -693,6 +706,10 @@ footer{
     }
     .skills:first-child{
         margin-top: 20px;
+    }
+    .main-project-container:first-child, 
+    .side-project-container:first-child{
+        margin-top: 0px;
     }
     .side-project-container{
         width: 100%;
