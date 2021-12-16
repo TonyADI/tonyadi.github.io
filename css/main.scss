@@ -852,6 +852,9 @@ footer{
     --tictactoe: #fff;
     background-color: var(--bdt-bg);
     color: var(--bdt-color);
+    #slider:before {
+        background-color: var(--bdt-bg);
+    }
     #switch:before{
         content: "Dark Mode";
     }

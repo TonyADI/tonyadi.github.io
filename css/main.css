@@ -939,6 +939,9 @@ footer {
   background-color: var(--bdt-bg);
   color: var(--bdt-color);
 }
+.body-dark-theme #slider:before {
+  background-color: var(--bdt-bg);
+}
 .body-dark-theme #switch:before {
   content: "Dark Mode";
 }
