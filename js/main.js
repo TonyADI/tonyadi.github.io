@@ -19,6 +19,13 @@ const sideProjectsOffset = sideProjects.offsetTop;
 const progressBarsLength = progressBars.length;
 const innerHeight = window.innerHeight;
 
+const slider = document.getElementById('slider');
+const body = document.getElementById('body');
+
+const toggleStyles = () => {
+    body.classList.toggle('body-dark-theme')
+}
+
 // Activate animations when in view
 const addAnimation = () => {
     if(window.scrollY > (skillsContainerOffset - innerHeight + 100)){
@@ -58,3 +65,4 @@ const addAnimation = () => {
 
 
 document.addEventListener('scroll', addAnimation);
+slider.addEventListener('click', toggleStyles)
