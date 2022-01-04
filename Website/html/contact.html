@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap-4.3.1.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="../css/custom.css" rel="stylesheet">
+  </head>
+  <body>
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand ml-5" href="../index.html"><i>ETA</i></a>
+		<div class="skip"><a href="#maincontent">Skip to main content</a></div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse offset-md-8" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Me</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="courses.html">Courses</a>
+          </li>
+		  <li class="nav-item active">
+            <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+          </li>
+			 <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+    <section id="maincontent">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12 text-center">
+			  <h1>Lets Talk!</h1>
+			  <hr>
+            <p>I'd love to hear any feedback you have for me. Be sure to also check out my socials as well! </p>
+          </div>
+		  <div class="col-md-5 mr-auto">
+		  	<form action="/action_page.php" class="needs-validation" novalidate>
+			  <div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" class="form-control" id="name" placeholder="Enter Your Name" name="name" required>
+				<div class="valid-feedback">Valid.</div>
+				<div class="invalid-feedback">Please fill out this field.</div>
+			  </div>
+			  <div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" class="form-control" id="email" placeholder="Enter Your Email" name="email" required>
+				<div class="valid-feedback">Valid.</div>
+				<div class="invalid-feedback">Please fill out this field.</div>
+			  </div>
+			  <div class="form-group">
+			    <label for="feedback">Feedback</label>
+			    <textarea class="form-control" rows="5" id="feedback" required placeholder="Enter Your Feedback"></textarea>
+			  </div>
+			  <button type="submit" class="btn btn-primary">Send</button>
+			</form>
+			</div>
+		  <div class="col-md-5 mr-auto">
+			  <p class="text-primary">E-mail</p>
+			  <p>emmanueladiari@hotmail.com</p>
+			  <hr>
+			  <p class="text-primary">Phone Number</p>
+			  <p>(289)-442-1678</p>
+			  <hr>
+			  <p class="text-primary">Location</p>
+			  <p>Mississauga, ON</p>
+			  <hr>
+			  <p class="text-primary">Socials</p>
+			  <a href="https://twitter.com/tonyad_?lang=en" data-toggle="tooltip" data-placement="right" title="Twitter" class="fa fa-twitter mr-5 text-center" target="_blank"><p class="text-primary">Twitter</p></a>
+			  <a href="https://www.snapchat.com/add/tonyy_ad" data-toggle="tooltip" data-placement="right" title="Snapchat" class="fa fa-snapchat-ghost snapchat mr-5 text-center" target="_blank"><p class="text-primary">Snapchat</p></a>
+			  <a href="https://www.instagram.com/emmanueladiari/?hl=en" data-toggle="tooltip" data-placement="right" title="Instagram" class="fa fa-instagram mr-5 text-center" target="_blank"><p class="text-primary">Instagram</p></a>
+				
+			  <hr>
+			  
+			</div>
+        </div>
+      </div>
+    </section>    
+    <hr>
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © ETA. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap-4.3.1.js"></script>
+	  <script>
+		$(document).ready(function(){
+		  $('[data-toggle="tooltip"]').tooltip();
+		});
+		</script>
+	<script>
+	// Disable form submissions if there are invalid fields
+		
+	(function() {
+	  'use strict';
+	  window.addEventListener('load', function() {
+		// Get the forms we want to add validation styles to
+		var forms = document.getElementsByClassName('needs-validation');
+		// Loop over them and prevent submission
+		var validation = Array.prototype.filter.call(forms, function(form) {
+		  form.addEventListener('submit', function(event) {
+			if (form.checkValidity() === false) {
+			  event.preventDefault();
+			  event.stopPropagation();
+			}
+			form.classList.add('was-validated');
+		  }, false);
+		});
+	  }, false);
+	})();
+	</script>
+  </body>
+</html>

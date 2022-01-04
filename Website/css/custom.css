@@ -1,0 +1,113 @@
+
+.jumbotron-ix{
+	background-image: url("../images/path.jpg");
+	background-position: center bottom;
+	background-size: cover;
+	padding: 15%;
+}
+
+.jumbotron-cr{
+	background-image: url("../images/books.jpg");
+	background-position: center center;
+	background-size: cover;
+	padding: 5%
+}
+
+.snapchat{
+	color: #FFDF30;
+}
+
+.bg-dark{
+	background-color: #00011D !important;
+}
+
+.custom-font{
+	font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+
+.badge-warning{
+	background-color: #FFDB1C;
+}
+
+.badge-danger{
+	background-color: #C62503;
+}
+
+.thead-primary{
+	background-color: #007bff;
+	color: #fff;
+}
+
+.img-container{
+	height: 540px;
+	width: 100%;
+}
+
+.img-square{
+	height: 400px;
+	width: 400px;
+}
+
+.img-rectangle{
+	height: 200px;
+}
+
+.skip{
+	margin: 0px;
+	padding: 0px;
+}
+
+.skip a {
+	padding:6px;
+	position: absolute;
+	top:-40px;
+	left:0px;
+	color:white;
+	border-right:1px solid white;
+	border-bottom:1px solid white;
+	border-bottom-right-radius:8px;
+    transition: top 1s ease-out;
+    z-index: 100;
+}
+
+.skip a:focus {
+	position:absolute;
+	left:0px;
+	top:0px;
+	outline-color:transparent;	
+	-webkit-transition: top .1s ease-in;
+    transition: top .1s ease-in;
+}
+
+.btn-primary{
+  color: #fff;
+  background-color: #0056B3;
+  border-color: #0056B3;
+}
+
+.thead-primary{
+	background-color: #0056B3;
+	color: #fff;
+}
+
+.btn-outline-primary {
+  color: #0056B3;
+  border-color: #0056B3;
+}
+
+.bg-success {
+  background-color: #186329 !important;
+}
+
+.text-primary {
+  color: #0056B3 !important;
+}
+
+.badge-primary {
+  color: #fff;
+  background-color: #0056B3;
+}
+
+a {
+  color: #0056B3;
+}
