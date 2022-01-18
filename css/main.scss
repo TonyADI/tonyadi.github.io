@@ -31,13 +31,16 @@ body {
 
 /* Theme Switcher */
 #switch:before{
-    content: "Light Mode";
+    content: "\f185";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    margin-right: 10px;
     position: absolute;
     right: 100%;
-    width: max-content;
     top: 50%;
     transform: translateY(-50%);
-    margin-right: 10px;
+    width: max-content;
 }
 
 #switch {
@@ -393,7 +396,7 @@ section h2{
 
 .side-project-container{
     border: 0.5px solid var(--border-color);
-    width: 25%;
+    width: 300px;
     min-height: 200px;
     border-radius: 15px;
     box-shadow: 1px 1px 5px var(--box-shadow-color);
@@ -856,7 +859,7 @@ footer{
         background-color: var(--bdt-bg);
     }
     #switch:before{
-        content: "Dark Mode";
+        content: "\f186";
     }
     p, footer span {
         color: var(--bdt-color);
