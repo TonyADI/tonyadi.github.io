@@ -194,7 +194,7 @@ section h2 {
 }
 
 .skills {
-  border: 0.5px solid var(--border-color);
+  border: 0;
   border-radius: 10px;
   padding: 20px 0px;
   width: 30%;
@@ -216,109 +216,10 @@ section h2 {
   padding: 0px;
 }
 
-#frontend-skills, #backend-skills, #personal-skills {
-  text-align: left;
+#frontend-skills, #backend-skills, #tools-skills {
   margin: 0px 20px;
 }
 
-.progress-bar-container {
-  border-radius: 2.5px;
-  border: 0;
-  background-color: #ddd;
-  box-shadow: 1px 1px 2px #bbb inset;
-  padding: 5px 0px;
-  position: relative;
-  margin-top: 5px;
-}
-
-.progress-bar span {
-  color: #fff;
-  font-size: 7.5px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0.5px;
-  margin-left: auto;
-  margin-right: auto;
-  width: max-content;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.skills:hover .progress-bar span {
-  opacity: 1;
-}
-
-.progress-bar {
-  position: absolute;
-  background-color: var(--pg-bg);
-  top: 0;
-  left: 0;
-  padding: inherit;
-  border-radius: 2.5px 0px 0px 2.5px;
-  width: 0px;
-}
-
-.progress-fill {
-  animation: progress-fill 1s ease 0.25s forwards;
-}
-
-#css-progress {
-  max-width: 75%;
-}
-
-#html-progress {
-  max-width: 75%;
-}
-
-#js-progress {
-  max-width: 62.5%;
-}
-
-#react-progress {
-  max-width: 50%;
-}
-
-#express-progress {
-  max-width: 45%;
-}
-
-#mysql-progress {
-  max-width: 45%;
-}
-
-#node-progress {
-  max-width: 60%;
-}
-
-#rest-progress {
-  max-width: 60%;
-}
-
-#problem-solving {
-  max-width: 70%;
-}
-
-#communication {
-  max-width: 82.5%;
-}
-
-#time-management {
-  max-width: 75%;
-}
-
-#self-learner {
-  max-width: 77.5%;
-}
-
-@keyframes progress-fill {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
 #portfolio-info a {
   text-decoration: none;
   color: #3a6ae4;
