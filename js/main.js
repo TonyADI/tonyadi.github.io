@@ -2,7 +2,6 @@ const skillsContainer = document.getElementById('skills-container');
 const skillsContainerOffset = skillsContainer.offsetTop;
 
 const scrollDown = document.getElementById('scroll-down');
-const progressBars = document.getElementsByClassName('progress-bar');
 
 const contactInfo = document.getElementById('contact-info');
 const contactInfoOffset = contactInfo.offsetTop;
@@ -16,7 +15,6 @@ const mainProjectsOffset = mainProjects.offsetTop;
 const sideProjects = document.getElementById('side-projects');
 const sideProjectsOffset = sideProjects.offsetTop;
 
-const progressBarsLength = progressBars.length;
 const innerHeight = window.innerHeight;
 
 const slider = document.getElementById('slider');
@@ -32,22 +30,11 @@ const addAnimation = () => {
         if(!skillsContainer.classList.contains('drop-in')){
             skillsContainer.classList.add('drop-in');
         }
-        if(!progressBars[0].classList.contains('progress-fill')){
-            // Start progress bar animation
-            for(let i =0; i < progressBarsLength; i++){
-                progressBars[i].classList.add('progress-fill')
-            }
-        }
         // Hide scroll down element
         scrollDown.classList.add('fade-out');
     }
     else{
         scrollDown.classList.remove('fade-out');
-        if(progressBars[0].classList.contains('progress-fill')){
-            for(let i =0; i < progressBarsLength; i++){
-                progressBars[i].classList.remove('progress-fill')
-            }
-        }
     }
     if(window.scrollY > (sideProjectsOffset - window.innerHeight + 100)){
         if(!sideProjects.classList.contains('scale-up')){
