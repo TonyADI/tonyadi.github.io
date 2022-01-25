@@ -12,6 +12,9 @@ const contactsContainerOffset = contactsContainer.offsetTop;
 const mainProjects = document.getElementById('main-projects');
 const mainProjectsOffset = mainProjects.offsetTop;
 
+const frontendMentor = document.getElementById('frontend-mentor-challenges');
+const frontendMentorOffset = frontendMentor.offsetTop;
+
 const sideProjects = document.getElementById('side-projects');
 const sideProjectsOffset = sideProjects.offsetTop;
 
@@ -36,9 +39,19 @@ const addAnimation = () => {
     else{
         scrollDown.classList.remove('fade-out');
     }
+    if(window.scrollY > (mainProjectsOffset - window.innerHeight + 100)){
+        if(!mainProjects.classList.contains('fade-in')){
+            mainProjects.classList.add('fade-in');
+        }
+    }
+    if(window.scrollY > (frontendMentorOffset - window.innerHeight + 100)){
+        if(!frontendMentor.classList.contains('drop-in')){
+            frontendMentor.classList.add('drop-in');
+        }
+    }
     if(window.scrollY > (sideProjectsOffset - window.innerHeight + 100)){
-        if(!sideProjects.classList.contains('scale-up')){
-            sideProjects.classList.add('scale-up');
+        if(!sideProjects.classList.contains('drop-in')){
+            sideProjects.classList.add('drop-in');
         }
     }
     if(window.scrollY > (contactInfoOffset - window.innerHeight + 100)){
