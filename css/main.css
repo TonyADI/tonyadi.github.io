@@ -396,12 +396,16 @@ section h2 {
 }
 
 #shopify-container .side-project-image,
-#shopify-winter-container .side-project-image {
+#bootstrap-project-container .side-project-image {
   transition: transform 1s;
 }
 
+#bootstrap-logo {
+  filter: brightness(0);
+}
+
 #shopify-container:hover .side-project-image,
-#shopify-winter-container:hover .side-project-image {
+#bootstrap-project-container:hover .side-project-image {
   transform: rotateY(360deg);
 }
 
@@ -864,6 +868,9 @@ footer {
 }
 .body-dark-theme .side-project-image, .body-dark-theme .contact img, .body-dark-theme .nav-logo img {
   filter: invert(1);
+}
+.body-dark-theme #bootstrap-logo {
+  filter: brightness(100);
 }
 .body-dark-theme #portfolio-info a {
   color: #396ae6;
