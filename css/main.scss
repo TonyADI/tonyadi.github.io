@@ -278,7 +278,7 @@ section h2{
 }
 
 
-.main-project-container:hover .main-project-image, .frontend-mentor-challenge{
+.main-project-container:hover .main-project-image, .frontend-mentor-challenge:hover{
     transform: scale(1.015, 1.015);
 }
 
@@ -311,7 +311,7 @@ section h2{
 .side-project-container{
     border: 0.5px solid var(--border-color);
     width: 300px;
-    min-height: 200px;
+    min-height: 180px;
     border-radius: 15px;
     box-shadow: 1px 1px 5px var(--box-shadow-color);
     margin: 20px auto;
