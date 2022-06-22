@@ -27,7 +27,6 @@ body {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    height: 80%;
     overflow: hidden;
     position: absolute;
     opacity: 0; 
