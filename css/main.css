@@ -116,6 +116,7 @@ input:checked + #slider:before {
   margin: 20px auto;
   overflow: hidden;
   position: relative;
+  transition: transform 0.5s;
   width: 370px;
 }
 #frontend-mentor-challenges .frontend-mentor-challenge:hover button {
