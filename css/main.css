@@ -152,6 +152,10 @@ section h2 {
   position: relative;
 }
 
+#rps-link {
+  color: inherit;
+}
+
 #hero-title {
   margin: 50px 25px 0;
   padding-top: 15%;
