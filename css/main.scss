@@ -614,7 +614,7 @@ footer{
 }
 
 @media only screen and (min-width: 769px){
-    .main-project-image:hover + .stack{
+    .main-project-container:hover .stack{
         transform: translateY(7.5px);
         opacity: 1;
     }
