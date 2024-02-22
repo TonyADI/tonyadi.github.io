@@ -12,6 +12,9 @@ const contactsContainerOffset = contactsContainer.offsetTop;
 const mainProjects = document.getElementById('main-projects');
 const mainProjectsOffset = mainProjects.offsetTop;
 
+const workProjects = document.getElementById('work-projects');
+const workProjectsOffset = workProjects.offsetTop;
+
 const frontendMentor = document.getElementById('frontend-mentor-challenges');
 const frontendMentorOffset = frontendMentor.offsetTop;
 
@@ -42,6 +45,11 @@ const addAnimation = () => {
     if(window.scrollY > (mainProjectsOffset - window.innerHeight + 100)){
         if(!mainProjects.classList.contains('fade-in')){
             mainProjects.classList.add('fade-in');
+        }
+    }
+    if(window.scrollY > (workProjectsOffset - window.innerHeight + 100)){
+        if(!workProjects.classList.contains('fade-in')){
+            workProjects.classList.add('fade-in');
         }
     }
     if(window.scrollY > (frontendMentorOffset - window.innerHeight + 100)){
