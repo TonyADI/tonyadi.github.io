@@ -746,6 +746,10 @@ footer {
     color: #050f19be;
   }
 
+  .work-project-stack {
+    opacity: 1;
+  }
+
   #view-more {
     color: #396ae6;
     background-color: #fff;
