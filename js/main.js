@@ -73,4 +73,7 @@ const addAnimation = () => {
 
 
 document.addEventListener('scroll', addAnimation);
-slider.addEventListener('click', toggleStyles)
+slider.addEventListener('click', toggleStyles);
+
+const yearElement = document.getElementById('year');
+yearElement.append(new Date().getFullYear());
